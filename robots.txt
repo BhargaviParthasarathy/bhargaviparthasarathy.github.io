@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.bhargaviparthasarathy.github.io/sitemap.xml
+Sitemap: https://bhargaviparthasarathy.github.io/sitemap.xml
