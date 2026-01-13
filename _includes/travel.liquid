@@ -43,7 +43,11 @@
           {% for conf in upcoming_sorted %}
             {% capture date_label %}
               {% if conf.end_date %}
-                {{ conf.start_date | date: '%b %-d' }} – {{ conf.end_date | date: '%b %-d' }}
+                {% if conf.start_date | date: '%b' == conf.end_date | date: '%b' %}
+                  {{ conf.start_date | date: '%b %-d' }} – {{ conf.end_date | date: '%-d' }}
+                {% else %}
+                  {{ conf.start_date | date: '%b %-d' }} – {{ conf.end_date | date: '%b %-d' }}
+                {% endif %}
               {% else %}
                 {{ conf.start_date | date: '%b %-d' }}
               {% endif %}
@@ -146,7 +150,11 @@
             {% if start_date_str < today_date %}
               {% capture date_label %}
                 {% if conf.end_date %}
-                  {{ conf.start_date | date: '%b %-d' }} – {{ conf.end_date | date: '%b %-d' }}
+                  {% if conf.start_date | date: '%b' == conf.end_date | date: '%b' %}
+                    {{ conf.start_date | date: '%b %-d' }} – {{ conf.end_date | date: '%-d' }}
+                  {% else %}
+                    {{ conf.start_date | date: '%b %-d' }} – {{ conf.end_date | date: '%b %-d' }}
+                  {% endif %}
                 {% else %}
                   {{ conf.start_date | date: '%b %-d' }}
                 {% endif %}
