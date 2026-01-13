@@ -4,6 +4,17 @@
     {% assign upcoming_list = "" | split: "" %}
     {% assign past_years = site.travel | sort: "name" | reverse %}
     
+    <!-- Legend/Key -->
+    <div class="travel-legend" style="float: right; margin-left: 2rem; margin-bottom: 1rem; padding: 1rem; border: 1px solid var(--global-divider-color); border-radius: 6px; background: var(--global-bg-color); max-width: 200px;">
+      <h4 style="margin-top: 0; margin-bottom: 0.75rem; font-size: 0.95rem;">Key</h4>
+      <div style="font-size: 0.85rem; line-height: 1.8;">
+        <div>🎤 Gave a talk</div>
+        <div>📊 Presented a poster</div>
+        <div>👥 Attended</div>
+        <div>* Virtual talk/conference</div>
+      </div>
+    </div>
+    
     <!-- DEBUG INFO START -->
     <div style="background: #f0f0f0; padding: 1rem; margin-bottom: 1rem; font-size: 0.8rem;">
       <strong>Debug Info:</strong><br>
@@ -88,30 +99,12 @@
         <a href="{{ conf.url }}" target="_blank" rel="noopener">{{ conf.name }}</a>{% if conf.virtual %}*{% endif %}
       {% else %}
         {{ conf.name }}{% if conf.virtual %}*{% endif %}
-      {% endif %}
+      {% endif %}, {{ conf.location }} – {{ date_label | strip }}
     </span>
-
-    <span class="conference-sep"> – </span>
-    <span class="conference-date-label">{{ date_label | strip }}</span>
   </span>
 </summary>
 
                   <div class="conference-details">
-                    <p><strong>Dates:</strong> 
-                      {% if conf.end_date %}
-                        {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
-                          {{ conf.start_date | date: '%b %d, %Y' }}
-                        {% else %}
-                          {{ conf.start_date | date: '%b %d, %Y' }} – {{ conf.end_date | date: '%b %d, %Y' }}
-                        {% endif %}
-                      {% else %}
-                        {{ conf.start_date | date: '%b %d, %Y' }}
-                      {% endif %}
-                    </p>
-                    <p><strong>Location:</strong> {{ conf.location }}</p>
-                    {% if conf.role %}
-                      <p><strong>Role:</strong> <span class="role-badge role-{{ conf.role }}">{% case conf.role %}{% when 'talk' %}🎤 Presenting Talk{% when 'poster' %}📊 Poster{% when 'attended' %}👥 Attending{% endcase %}</span></p>
-                    {% endif %}
                     {% if conf.talk_title %}
                       <p><strong>Talk:</strong> {{ conf.talk_title }}</p>
                     {% endif %}
@@ -184,30 +177,12 @@
         <a href="{{ conf.url }}" target="_blank" rel="noopener">{{ conf.name }}</a>{% if conf.virtual %}*{% endif %}
       {% else %}
         {{ conf.name }}{% if conf.virtual %}*{% endif %}
-      {% endif %}
+      {% endif %}, {{ conf.location }} – {{ date_label | strip }}
     </span>
-
-    <span class="conference-sep"> – </span>
-    <span class="conference-date-label">{{ date_label | strip }}</span>
   </span>
 </summary>
 
                   <div class="conference-details">
-                    <p><strong>Dates:</strong> 
-                      {% if conf.end_date %}
-                        {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
-                          {{ conf.start_date | date: '%b %d, %Y' }}
-                        {% else %}
-                          {{ conf.start_date | date: '%b %d, %Y' }} – {{ conf.end_date | date: '%b %d, %Y' }}
-                        {% endif %}
-                      {% else %}
-                        {{ conf.start_date | date: '%b %d, %Y' }}
-                      {% endif %}
-                    </p>
-                    <p><strong>Location:</strong> {{ conf.location }}</p>
-                    {% if conf.role %}
-                      <p><strong>Role:</strong> <span class="role-badge role-{{ conf.role }}">{% case conf.role %}{% when 'talk' %}🎤 Presented Talk{% when 'poster' %}📊 Poster{% when 'attended' %}👥 Attended{% endcase %}</span></p>
-                    {% endif %}
                     {% if conf.talk_title %}
                       <p><strong>Talk:</strong> {{ conf.talk_title }}</p>
                     {% endif %}
