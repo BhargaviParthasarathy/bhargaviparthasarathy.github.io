@@ -28,20 +28,22 @@
                 <details class="conference-detail">
                   <summary>
                     <span class="conference-icon">{% case conf.role %}{% when 'talk' %}🎤{% when 'poster' %}📊{% when 'attended' %}👥{% endcase %}</span>
-                    {% if conf.url %}
-                      <a href="{{ conf.url }}" target="_blank">{{ conf.name }}</a>
-                    {% else %}
-                      {{ conf.name }}
-                    {% endif %}
-                    <span class="conference-mini-date"> — 
+                    <span class="conference-date-label">
                       {% if conf.end_date %}
                         {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
-                          {{ conf.start_date | date: '%b %d, %Y' }}
+                          {{ conf.start_date | date: '%b %d' }}
                         {% else %}
-                          {{ conf.start_date | date: '%b %d' }} – {{ conf.end_date | date: '%b %d, %Y' }}
+                          {{ conf.start_date | date: '%b %d' }} – {{ conf.end_date | date: '%b %d' }}
                         {% endif %}
                       {% else %}
-                        {{ conf.start_date | date: '%b %d, %Y' }}
+                        {{ conf.start_date | date: '%b %d' }}
+                      {% endif %}
+                    </span>
+                    <span class="conference-name">
+                      {% if conf.url %}
+                        <a href="{{ conf.url }}" target="_blank">{{ conf.name }}</a>
+                      {% else %}
+                        {{ conf.name }}
                       {% endif %}
                     </span>
                   </summary>
@@ -104,20 +106,22 @@
                       <details class="conference-detail">
                         <summary>
                           <span class="conference-icon">{% case conf.role %}{% when 'talk' %}🎤{% when 'poster' %}📊{% when 'attended' %}👥{% endcase %}</span>
-                          {% if conf.url %}
-                            <a href="{{ conf.url }}" target="_blank">{{ conf.name }}</a>
-                          {% else %}
-                            {{ conf.name }}
-                          {% endif %}
-                          <span class="conference-mini-date"> — 
+                          <span class="conference-date-label">
                             {% if conf.end_date %}
                               {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
-                                {{ conf.start_date | date: '%b %d, %Y' }}
+                                {{ conf.start_date | date: '%b %d' }}
                               {% else %}
-                                {{ conf.start_date | date: '%b %d' }} – {{ conf.end_date | date: '%b %d, %Y' }}
+                                {{ conf.start_date | date: '%b %d' }} – {{ conf.end_date | date: '%b %d' }}
                               {% endif %}
                             {% else %}
-                              {{ conf.start_date | date: '%b %d, %Y' }}
+                              {{ conf.start_date | date: '%b %d' }}
+                            {% endif %}
+                          </span>
+                          <span class="conference-name">
+                            {% if conf.url %}
+                              <a href="{{ conf.url }}" target="_blank">{{ conf.name }}</a>
+                            {% else %}
+                              {{ conf.name }}
                             {% endif %}
                           </span>
                         </summary>

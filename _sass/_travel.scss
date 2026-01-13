@@ -153,6 +153,30 @@
   margin-top: 0.1rem;
 }
 
+.conference-date-label {
+  font-weight: 600;
+  color: var(--global-text-color);
+  margin-right: 0.5rem;
+}
+
+.conference-date-label::after {
+  content: ':';
+  margin-right: 0.3rem;
+}
+
+.conference-name {
+  color: var(--global-text-color);
+}
+
+.conference-name a {
+  color: var(--global-theme-color);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 details.conference-detail summary {
   cursor: pointer;
   padding: 0.5rem 0;
