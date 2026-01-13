@@ -59,33 +59,41 @@
             {% endcapture %}
             {% assign conf_year = conf.start_date | date: "%Y" %}
             <div class="conference-item">
-              <details class="conference-detail">
-                <summary>
-  <span class="conference-line">
-    <span class="conference-icon" aria-hidden="true">
-      {% case conf.role %}
-        {% when 'talk' %}🎤
-        {% when 'poster' %}📊
-        {% when 'attended' %}👥
-        {% else %}📍
-      {% endcase %}
-    </span>
-
-    <span class="conference-name">
-      {% if conf.url %}<a href="{{ conf.url }}" target="_blank" rel="noopener">{{ conf.name }}</a>{% if conf.virtual %}*{% endif %}{% if conf.location %}, {{ conf.location }}{% endif %} – {{ date_label | strip }}, {{ conf_year }}{% else %}{{ conf.name }}{% if conf.virtual %}*{% endif %}{% if conf.location %}, {{ conf.location }}{% endif %} – {{ date_label | strip }}, {{ conf_year }}{% endif %}
-    </span>
-  </span>
-</summary>
-
-                <div class="conference-details">
-                  {% if conf.talk_title %}
-                    <p><strong>Talk:</strong> {{ conf.talk_title }}</p>
-                  {% endif %}
-                  {% if conf.description %}
-                    <p>{{ conf.description }}</p>
-                  {% endif %}
-                </div>
-              </details>
+              {% if conf.role == 'attended' %}
+                <span class="conference-line">
+                  <span class="conference-icon" aria-hidden="true">
+                    👥
+                  </span>
+                  <span class="conference-name">
+                    {% if conf.url %}<a href="{{ conf.url }}" target="_blank" rel="noopener">{{ conf.name }}</a>{% if conf.virtual %}*{% endif %}{% if conf.location %}, {{ conf.location }}{% endif %} – {{ date_label | strip }}, {{ conf_year }}{% else %}{{ conf.name }}{% if conf.virtual %}*{% endif %}{% if conf.location %}, {{ conf.location }}{% endif %} – {{ date_label | strip }}, {{ conf_year }}{% endif %}
+                  </span>
+                </span>
+              {% else %}
+                <details class="conference-detail">
+                  <summary>
+                    <span class="conference-line">
+                      <span class="conference-icon" aria-hidden="true">
+                        {% case conf.role %}
+                          {% when 'talk' %}🎤
+                          {% when 'poster' %}📊
+                          {% else %}📍
+                        {% endcase %}
+                      </span>
+                      <span class="conference-name">
+                        {% if conf.url %}<a href="{{ conf.url }}" target="_blank" rel="noopener">{{ conf.name }}</a>{% if conf.virtual %}*{% endif %}{% if conf.location %}, {{ conf.location }}{% endif %} – {{ date_label | strip }}, {{ conf_year }}{% else %}{{ conf.name }}{% if conf.virtual %}*{% endif %}{% if conf.location %}, {{ conf.location }}{% endif %} – {{ date_label | strip }}, {{ conf_year }}{% endif %}
+                      </span>
+                    </span>
+                  </summary>
+                  <div class="conference-details">
+                    {% if conf.talk_title %}
+                      <p><strong>Talk:</strong> {{ conf.talk_title }}</p>
+                    {% endif %}
+                    {% if conf.description %}
+                      <p>{{ conf.description }}</p>
+                    {% endif %}
+                  </div>
+                </details>
+              {% endif %}
             </div>
           {% endfor %}
         </div>
@@ -134,33 +142,41 @@
                   {% endif %}
                 {% endcapture %}
                 <div class="conference-item">
-                  <details class="conference-detail">
-                    <summary>
-  <span class="conference-line">
-    <span class="conference-icon" aria-hidden="true">
-      {% case conf.role %}
-        {% when 'talk' %}🎤
-        {% when 'poster' %}📊
-        {% when 'attended' %}👥
-        {% else %}📍
-      {% endcase %}
-    </span>
-
-    <span class="conference-name">
-      {% if conf.url %}<a href="{{ conf.url }}" target="_blank" rel="noopener">{{ conf.name }}</a>{% if conf.virtual %}*{% endif %}{% if conf.location %}, {{ conf.location }}{% endif %} – {{ date_label | strip }}{% else %}{{ conf.name }}{% if conf.virtual %}*{% endif %}{% if conf.location %}, {{ conf.location }}{% endif %} – {{ date_label | strip }}{% endif %}
-    </span>
-  </span>
-</summary>
-
-                    <div class="conference-details">
-                      {% if conf.talk_title %}
-                        <p><strong>Talk:</strong> {{ conf.talk_title }}</p>
-                      {% endif %}
-                      {% if conf.description %}
-                        <p>{{ conf.description }}</p>
-                      {% endif %}
-                    </div>
-                  </details>
+                  {% if conf.role == 'attended' %}
+                    <span class="conference-line">
+                      <span class="conference-icon" aria-hidden="true">
+                        👥
+                      </span>
+                      <span class="conference-name">
+                        {% if conf.url %}<a href="{{ conf.url }}" target="_blank" rel="noopener">{{ conf.name }}</a>{% if conf.virtual %}*{% endif %}{% if conf.location %}, {{ conf.location }}{% endif %} – {{ date_label | strip }}{% else %}{{ conf.name }}{% if conf.virtual %}*{% endif %}{% if conf.location %}, {{ conf.location }}{% endif %} – {{ date_label | strip }}{% endif %}
+                      </span>
+                    </span>
+                  {% else %}
+                    <details class="conference-detail">
+                      <summary>
+                        <span class="conference-line">
+                          <span class="conference-icon" aria-hidden="true">
+                            {% case conf.role %}
+                              {% when 'talk' %}🎤
+                              {% when 'poster' %}📊
+                              {% else %}📍
+                            {% endcase %}
+                          </span>
+                          <span class="conference-name">
+                            {% if conf.url %}<a href="{{ conf.url }}" target="_blank" rel="noopener">{{ conf.name }}</a>{% if conf.virtual %}*{% endif %}{% if conf.location %}, {{ conf.location }}{% endif %} – {{ date_label | strip }}{% else %}{{ conf.name }}{% if conf.virtual %}*{% endif %}{% if conf.location %}, {{ conf.location }}{% endif %} – {{ date_label | strip }}{% endif %}
+                          </span>
+                        </span>
+                      </summary>
+                      <div class="conference-details">
+                        {% if conf.talk_title %}
+                          <p><strong>Talk:</strong> {{ conf.talk_title }}</p>
+                        {% endif %}
+                        {% if conf.description %}
+                          <p>{{ conf.description }}</p>
+                        {% endif %}
+                      </div>
+                    </details>
+                  {% endif %}
                 </div>
               {% endif %}
             {% endfor %}
