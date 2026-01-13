@@ -15,18 +15,6 @@
       </div>
     </div>
     
-    <!-- DEBUG INFO START -->
-    <div style="background: #f0f0f0; padding: 1rem; margin-bottom: 1rem; font-size: 0.8rem;">
-      <strong>Debug Info:</strong><br>
-      Total years loaded: {{ past_years | size }}<br>
-      Today's date: {{ today_date }}<br>
-      Years:<br>
-      {% for year_doc in past_years %}
-        - Year: {{ year_doc.year }}, Name: {{ year_doc.name }}, Conferences: {{ year_doc.conferences | size }}<br>
-      {% endfor %}
-    </div>
-    <!-- DEBUG INFO END -->
-    
     <!-- Extract all upcoming and past conferences -->
     {% for year_doc in past_years %}
       {% if year_doc.conferences %}
