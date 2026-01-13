@@ -1,34 +1,123 @@
-<div class="news">
-  {% if site.news != blank %}
-    {% assign news_size = site.news | size %}
-    <div
-      class="table-responsive"
-      {% if include.limit and page.announcements.scrollable and news_size > 3 %}
-        style="max-height: 60vw"
+<div class="travel-log">
+  {% if site.data.conferences %}
+    {% assign today = "now" | date: "%s" | plus: 0 %}
+    {% assign upcoming = "" | split: "" %}
+    {% assign past = "" | split: "" %}
+    
+    <!-- Separate conferences into upcoming and past based on start_date -->
+    {% for conference in site.data.conferences %}
+      {% assign conf_date = conference.start_date | date: "%s" | plus: 0 %}
+      {% if conf_date >= today %}
+        {% assign upcoming = upcoming | push: conference %}
+      {% else %}
+        {% assign past = past | push: conference %}
       {% endif %}
-    >
-      <table class="table table-sm table-borderless">
-        {% assign news = site.news | reverse %}
-        {% if include.limit and page.announcements.limit %}
-          {% assign news_limit = page.announcements.limit %}
-        {% else %}
-          {% assign news_limit = news_size %}
-        {% endif %}
-        {% for item in news limit: news_limit %}
-          <tr>
-            <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th>
-            <td>
-              {% if item.inline %}
-                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
-              {% else %}
-                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
-              {% endif %}
-            </td>
-          </tr>
-        {% endfor %}
-      </table>
-    </div>
+    {% endfor %}
+    
+    <!-- Upcoming Travel Section -->
+    {% if upcoming.size > 0 %}
+      <div class="upcoming-travel">
+        <h3>Upcoming Conferences</h3>
+        <div class="conference-list">
+          {% for conf in upcoming %}
+            <div class="conference-card">
+              <div class="conference-header">
+                <h4>
+                  {% if conf.url %}
+                    <a href="{{ conf.url }}" target="_blank">{{ conf.name }}</a>
+                  {% else %}
+                    {{ conf.name }}
+                  {% endif %}
+                </h4>
+                <span class="conference-dates">
+                  {{ conf.start_date | date: '%b %d' }} – {{ conf.end_date | date: '%b %d, %Y' }}
+                </span>
+              </div>
+              <div class="conference-details">
+                <p><strong>Location:</strong> {{ conf.location }}</p>
+                {% if conf.role %}
+                  <p>
+                    <strong>Role:</strong> 
+                    <span class="role-badge role-{{ conf.role }}">
+                      {% case conf.role %}
+                        {% when 'talk' %}
+                          🎤 Presenting Talk
+                        {% when 'poster' %}
+                          📊 Poster Presentation
+                        {% when 'attended' %}
+                          👥 Attending
+                      {% endcase %}
+                    </span>
+                  </p>
+                {% endif %}
+                {% if conf.talk_title %}
+                  <p><strong>Talk:</strong> {{ conf.talk_title }}</p>
+                {% endif %}
+                {% if conf.description %}
+                  <p>{{ conf.description }}</p>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+    
+    <!-- Past Travel Section -->
+    {% if past.size > 0 %}
+      <div class="past-travel">
+        <h3>Past Conferences</h3>
+        <div class="conference-list">
+          {% assign past_sorted = past | reverse %}
+          {% for conf in past_sorted %}
+            <div class="conference-card">
+              <div class="conference-header">
+                <h4>
+                  {% if conf.url %}
+                    <a href="{{ conf.url }}" target="_blank">{{ conf.name }}</a>
+                  {% else %}
+                    {{ conf.name }}
+                  {% endif %}
+                </h4>
+                <span class="conference-dates">
+                  {{ conf.start_date | date: '%b %d' }} – {{ conf.end_date | date: '%b %d, %Y' }}
+                </span>
+              </div>
+              <div class="conference-details">
+                <p><strong>Location:</strong> {{ conf.location }}</p>
+                {% if conf.role %}
+                  <p>
+                    <strong>Role:</strong> 
+                    <span class="role-badge role-{{ conf.role }}">
+                      {% case conf.role %}
+                        {% when 'talk' %}
+                          🎤 Presented Talk
+                        {% when 'poster' %}
+                          📊 Poster Presentation
+                        {% when 'attended' %}
+                          👥 Attended
+                      {% endcase %}
+                    </span>
+                  </p>
+                {% endif %}
+                {% if conf.talk_title %}
+                  <p><strong>Talk:</strong> {{ conf.talk_title }}</p>
+                {% endif %}
+                {% if conf.description %}
+                  <p>{{ conf.description }}</p>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+    
+    <!-- No travel message -->
+    {% if upcoming.size == 0 and past.size == 0 %}
+      <p>No conferences logged yet.</p>
+    {% endif %}
   {% else %}
-    <p>No news so far...</p>
+    <p>No conference data available.</p>
   {% endif %}
 </div>

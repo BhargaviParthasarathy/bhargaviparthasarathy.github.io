@@ -1,0 +1,35 @@
+# Conference Travel Log
+# Add conference entries with the following structure:
+# - name: Conference Name
+#   location: City, Country
+#   start_date: YYYY-MM-DD
+#   end_date: YYYY-MM-DD
+#   role: "talk" | "poster" | "attended"
+#   talk_title: "Title of your talk" (optional, only if role is "talk")
+#   description: Additional details (optional)
+#   url: Link to conference website (optional)
+
+- name: International Conference on Machine Learning
+  location: Vienna, Austria
+  start_date: 2026-06-15
+  end_date: 2026-06-18
+  role: talk
+  talk_title: "Deep Learning in Real-time Systems"
+  description: Keynote presentation on scalable neural networks
+  url: https://example.com/icml2026
+
+- name: Neural Information Processing Systems (NeurIPS)
+  location: Vancouver, Canada
+  start_date: 2025-12-10
+  end_date: 2025-12-15
+  role: poster
+  description: "Poster presentation on optimization techniques"
+  url: https://example.com/neurips2025
+
+- name: Data Science Summit
+  location: San Francisco, USA
+  start_date: 2025-10-05
+  end_date: 2025-10-07
+  role: attended
+  description: "Attended keynotes on industry applications"
+  url: https://example.com/datasummit2025
