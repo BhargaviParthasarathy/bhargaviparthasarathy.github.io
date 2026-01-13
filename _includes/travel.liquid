@@ -27,19 +27,27 @@
                   <summary>
                     {{ conf.name }}
                     <span class="conference-mini-date"> — 
-                      {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
-                        {{ conf.start_date | date: '%b %d, %Y' }}
+                      {% if conf.end_date %}
+                        {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
+                          {{ conf.start_date | date: '%b %d, %Y' }}
+                        {% else %}
+                          {{ conf.start_date | date: '%b %d' }} – {{ conf.end_date | date: '%b %d, %Y' }}
+                        {% endif %}
                       {% else %}
-                        {{ conf.start_date | date: '%b %d' }} – {{ conf.end_date | date: '%b %d, %Y' }}
+                        {{ conf.start_date | date: '%b %d, %Y' }}
                       {% endif %}
                     </span>
                   </summary>
                   <div class="conference-details">
                     <p><strong>Dates:</strong> 
-                      {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
-                        {{ conf.start_date | date: '%b %d, %Y' }}
+                      {% if conf.end_date %}
+                        {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
+                          {{ conf.start_date | date: '%b %d, %Y' }}
+                        {% else %}
+                          {{ conf.start_date | date: '%b %d, %Y' }} – {{ conf.end_date | date: '%b %d, %Y' }}
+                        {% endif %}
                       {% else %}
-                        {{ conf.start_date | date: '%b %d, %Y' }} – {{ conf.end_date | date: '%b %d, %Y' }}
+                        {{ conf.start_date | date: '%b %d, %Y' }}
                       {% endif %}
                     </p>
                     <p><strong>Location:</strong> {{ conf.location }}</p>
@@ -77,6 +85,7 @@
               {% assign years = years | push: y %}
             {% endunless %}
           {% endfor %}
+          {% assign years = years | sort | reverse %}
 
           {% for year in years %}
             <div class="conference-year">
@@ -88,10 +97,30 @@
                       <details class="conference-detail">
                         <summary>
                           {{ conf.name }}
-                          <span class="conference-mini-date"> — {{ conf.start_date | date: '%b %d' }}</span>
+                          <span class="conference-mini-date"> — 
+                            {% if conf.end_date %}
+                              {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
+                                {{ conf.start_date | date: '%b %d, %Y' }}
+                              {% else %}
+                                {{ conf.start_date | date: '%b %d' }} – {{ conf.end_date | date: '%b %d, %Y' }}
+                              {% endif %}
+                            {% else %}
+                              {{ conf.start_date | date: '%b %d, %Y' }}
+                            {% endif %}
+                          </span>
                         </summary>
                         <div class="conference-details">
-                          <p><strong>Dates:</strong> {{ conf.start_date | date: '%b %d, %Y' }} – {{ conf.end_date | date: '%b %d, %Y' }}</p>
+                          <p><strong>Dates:</strong> 
+                            {% if conf.end_date %}
+                              {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
+                                {{ conf.start_date | date: '%b %d, %Y' }}
+                              {% else %}
+                                {{ conf.start_date | date: '%b %d, %Y' }} – {{ conf.end_date | date: '%b %d, %Y' }}
+                              {% endif %}
+                            {% else %}
+                              {{ conf.start_date | date: '%b %d, %Y' }}
+                            {% endif %}
+                          </p>
                           <p><strong>Location:</strong> {{ conf.location }}</p>
                           {% if conf.role %}
                             <p><strong>Role:</strong> <span class="role-badge role-{{ conf.role }}">{% case conf.role %}{% when 'talk' %}🎤 Presented Talk{% when 'poster' %}📊 Poster{% when 'attended' %}👥 Attended{% endcase %}</span></p>
