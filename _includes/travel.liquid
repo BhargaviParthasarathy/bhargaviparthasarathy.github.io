@@ -43,13 +43,7 @@
           {% for conf in upcoming_sorted %}
             {% capture date_label %}
               {% if conf.end_date %}
-                {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
-                  {{ conf.start_date | date: '%b %-d' }}
-                {% elsif conf.start_date | date: '%b' == conf.end_date | date: '%b' %}
-                  {{ conf.start_date | date: '%b %-d' }}–{{ conf.end_date | date: '%-d' }}
-                {% else %}
-                  {{ conf.start_date | date: '%b %-d' }}–{{ conf.end_date | date: '%b %-d' }}
-                {% endif %}
+                {{ conf.start_date | date: '%b %-d' }} – {{ conf.end_date | date: '%b %-d' }}
               {% else %}
                 {{ conf.start_date | date: '%b %-d' }}
               {% endif %}
@@ -152,13 +146,7 @@
             {% if start_date_str < today_date %}
               {% capture date_label %}
                 {% if conf.end_date %}
-                  {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
-                    {{ conf.start_date | date: '%b %-d' }}
-                  {% elsif conf.start_date | date: '%b' == conf.end_date | date: '%b' %}
-                    {{ conf.start_date | date: '%b %-d' }}–{{ conf.end_date | date: '%-d' }}
-                  {% else %}
-                    {{ conf.start_date | date: '%b %-d' }}–{{ conf.end_date | date: '%b %-d' }}
-                  {% endif %}
+                  {{ conf.start_date | date: '%b %-d' }} – {{ conf.end_date | date: '%b %-d' }}
                 {% else %}
                   {{ conf.start_date | date: '%b %-d' }}
                 {% endif %}
