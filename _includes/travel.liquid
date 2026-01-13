@@ -77,6 +77,7 @@
               {% assign years = years | push: y %}
             {% endunless %}
           {% endfor %}
+          {% assign years = years | sort | reverse %}
 
           {% for year in years %}
             <div class="conference-year">
