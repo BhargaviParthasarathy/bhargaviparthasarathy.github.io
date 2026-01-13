@@ -204,36 +204,4 @@
   role: attended
   url: https://math.cornell.edu/route-81-conference
 
-- name: KUMUNU 2023
-  location: University of Missouri, Columbia
-  start_date: 2023-09-23
-  end_date: 2023-09-24
-  role: attended
-  url: https://sites.google.com/view/kumunu2023/home?authuser=0
 
-- name: Connections Workshop: Commutative Algebra
-  location: SLMath, Berkeley
-  start_date: 2024-01-18
-  end_date: 2024-01-19
-  role: attended
-  url: https://www.slmath.org/workshops/1052
-
-- name: Introductory Workshop: Commutative Algebra
-  location: SLMath, Berkeley
-  start_date: 2024-01-22
-  end_date: 2024-01-26
-  role: attended
-  url: https://www.slmath.org/workshops/1053
-
-- name: Commutative Algebra and its Interaction with Algebraic Geometry
-  location: CMND, University of Notre Dame and SLMath, Berkeley
-  start_date: 2024-11-02
-  role: attended
-  url: https://sites.nd.edu/msri-cmnd-2023workshop/workshop-details/
-
-- name: Women and Mathematics: Representation theory and categorification
-  location: Institute for Advanced Study, Princeton
-  start_date: 2021-05-22
-  end_date: 2021-05-28
-  role: attended
-  url: https://www.ias.edu/math/wam/2021
