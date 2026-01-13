@@ -9,14 +9,14 @@
 #   description: Additional details (optional)
 #   url: Link to conference website (optional)
 
-- name: International Conference on Machine Learning
-  location: Vienna, Austria
-  start_date: 2026-06-15
-  end_date: 2026-06-18
+- name: 2026 Joint Mathematics Meetings
+  location: Washington D.C.
+  start_date: 2026-01-04
+  end_date: 2026-01-07
   role: talk
-  talk_title: "Deep Learning in Real-time Systems"
-  description: Keynote presentation on scalable neural networks
-  url: https://example.com/icml2026
+  talk_title: "Homomorphisms of maximal Cohen-Macaulay modules over the cone of an elliptic curve"
+  description: Invited talk in the AMS Special Session on Recent Advances In Commutative Algebra
+  url: https://jointmathematicsmeetings.org/jmm
 
 - name: Neural Information Processing Systems (NeurIPS)
   location: Vancouver, Canada
@@ -33,3 +33,111 @@
   role: attended
   description: "Attended keynotes on industry applications"
   url: https://example.com/datasummit2025
+
+- name: International Conference on Machine Learning
+  location: Vienna, Austria
+  start_date: 2026-06-15
+  end_date: 2026-06-18
+  role: talk
+  talk_title: "Deep Learning in Real-time Systems"
+  description: Keynote presentation on scalable neural networks
+  url: https://example.com/icml2026
+
+- name: International Conference on Machine Learning
+  location: Vienna, Austria
+  start_date: 2026-06-15
+  end_date: 2026-06-18
+  role: talk
+  talk_title: "Deep Learning in Real-time Systems"
+  description: Keynote presentation on scalable neural networks
+  url: https://example.com/icml2026
+
+- name: International Conference on Machine Learning
+  location: Vienna, Austria
+  start_date: 2026-06-15
+  end_date: 2026-06-18
+  role: talk
+  talk_title: "Deep Learning in Real-time Systems"
+  description: Keynote presentation on scalable neural networks
+  url: https://example.com/icml2026
+
+- name: International Conference on Machine Learning
+  location: Vienna, Austria
+  start_date: 2026-06-15
+  end_date: 2026-06-18
+  role: talk
+  talk_title: "Deep Learning in Real-time Systems"
+  description: Keynote presentation on scalable neural networks
+  url: https://example.com/icml2026
+
+- name: International Conference on Machine Learning
+  location: Vienna, Austria
+  start_date: 2026-06-15
+  end_date: 2026-06-18
+  role: talk
+  talk_title: "Deep Learning in Real-time Systems"
+  description: Keynote presentation on scalable neural networks
+  url: https://example.com/icml2026
+
+- name: International Conference on Machine Learning
+  location: Vienna, Austria
+  start_date: 2026-06-15
+  end_date: 2026-06-18
+  role: talk
+  talk_title: "Deep Learning in Real-time Systems"
+  description: Keynote presentation on scalable neural networks
+  url: https://example.com/icml2026
+
+- name: International Conference on Machine Learning
+  location: Vienna, Austria
+  start_date: 2026-06-15
+  end_date: 2026-06-18
+  role: talk
+  talk_title: "Deep Learning in Real-time Systems"
+  description: Keynote presentation on scalable neural networks
+  url: https://example.com/icml2026
+
+- name: International Conference on Machine Learning
+  location: Vienna, Austria
+  start_date: 2026-06-15
+  end_date: 2026-06-18
+  role: talk
+  talk_title: "Deep Learning in Real-time Systems"
+  description: Keynote presentation on scalable neural networks
+  url: https://example.com/icml2026
+
+- name: International Conference on Machine Learning
+  location: Vienna, Austria
+  start_date: 2026-06-15
+  end_date: 2026-06-18
+  role: talk
+  talk_title: "Deep Learning in Real-time Systems"
+  description: Keynote presentation on scalable neural networks
+  url: https://example.com/icml2026
+
+- name: International Conference on Machine Learning
+  location: Vienna, Austria
+  start_date: 2026-06-15
+  end_date: 2026-06-18
+  role: talk
+  talk_title: "Deep Learning in Real-time Systems"
+  description: Keynote presentation on scalable neural networks
+  url: https://example.com/icml2026
+
+- name: International Conference on Machine Learning
+  location: Vienna, Austria
+  start_date: 2026-06-15
+  end_date: 2026-06-18
+  role: talk
+  talk_title: "Deep Learning in Real-time Systems"
+  description: Keynote presentation on scalable neural networks
+  url: https://example.com/icml2026
+
+- name: International Conference on Machine Learning
+  location: Vienna, Austria
+  start_date: 2026-06-15
+  end_date: 2026-06-18
+  role: talk
+  talk_title: "Deep Learning in Real-time Systems"
+  description: Keynote presentation on scalable neural networks
+  url: https://example.com/icml2026
