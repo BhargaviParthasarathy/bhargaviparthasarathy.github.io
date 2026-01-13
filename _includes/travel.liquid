@@ -47,7 +47,7 @@
           {% for conf in upcoming_sorted %}
             {% capture date_label %}
               {% if conf.end_date %}
-                {% if conf.start_date | date: '%b' == conf.end_date | date: '%b' %}
+                {% if conf.start_date | date: '%m' == conf.end_date | date: '%m' %}
                   {{ conf.start_date | date: '%b %-d' }}–{{ conf.end_date | date: '%-d' }}
                 {% else %}
                   {{ conf.start_date | date: '%b %-d' }}–{{ conf.end_date | date: '%b %-d' }}
@@ -133,7 +133,7 @@
               {% if start_date_str < today_date %}
                 {% capture date_label %}
                   {% if conf.end_date %}
-                    {% if conf.start_date | date: '%b' == conf.end_date | date: '%b' %}
+                    {% if conf.start_date | date: '%m' == conf.end_date | date: '%m' %}
                       {{ conf.start_date | date: '%b %-d' }}–{{ conf.end_date | date: '%-d' }}
                     {% else %}
                       {{ conf.start_date | date: '%b %-d' }}–{{ conf.end_date | date: '%b %-d' }}
