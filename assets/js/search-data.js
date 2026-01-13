@@ -209,17 +209,6 @@ ninja.data = [{
             window.location.href = "/blog/2023/post-bibliography/";
           
         },
-      },{id: "post-a-post-with-jupyter-notebook",
-        
-          title: "a post with jupyter notebook",
-        
-        description: "an example of a blog post with jupyter notebook",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2023/jupyter-notebook/";
-          
-        },
       },{id: "post-a-post-with-custom-blockquotes",
         
           title: "a post with custom blockquotes",
@@ -341,17 +330,6 @@ ninja.data = [{
             window.location.href = "/blog/2021/distill/";
           
         },
-      },{id: "post-a-post-with-twitter",
-        
-          title: "a post with twitter",
-        
-        description: "an example of a blog post with twitter",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2020/twitter/";
-          
-        },
       },{id: "post-a-post-with-disqus-comments",
         
           title: "a post with disqus comments",
@@ -457,41 +435,6 @@ ninja.data = [{
           description: "another project with an image 🎉",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
-            },},{id: "travel-2020",
-          title: '2020',
-          description: "",
-          section: "Travel",handler: () => {
-              window.location.href = "/travel/2020/";
-            },},{id: "travel-",
-          title: '',
-          description: "",
-          section: "Travel",handler: () => {
-              window.location.href = "/travel/2021/";
-            },},{id: "travel-2022",
-          title: '2022',
-          description: "",
-          section: "Travel",handler: () => {
-              window.location.href = "/travel/2022/";
-            },},{id: "travel-2023",
-          title: '2023',
-          description: "",
-          section: "Travel",handler: () => {
-              window.location.href = "/travel/2023/";
-            },},{id: "travel-",
-          title: '',
-          description: "",
-          section: "Travel",handler: () => {
-              window.location.href = "/travel/2024/";
-            },},{id: "travel-2025",
-          title: '2025',
-          description: "",
-          section: "Travel",handler: () => {
-              window.location.href = "/travel/2025/";
-            },},{id: "travel-2026",
-          title: '2026',
-          description: "",
-          section: "Travel",handler: () => {
-              window.location.href = "/travel/2026/";
             },},{
         id: 'social-cv',
         title: 'CV',
