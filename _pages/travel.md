@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Upcoming & past travel
+title: travel
 permalink: /travel/
 nav: true
 nav_order: 4
