@@ -36,6 +36,17 @@
           {% assign upcoming_sorted = upcoming_list | sort: 'start_date' %}
           {% assign current_year = "" %}
           {% for conf in upcoming_sorted %}
+          {% capture date_label %}
+  {% if conf.end_date %}
+    {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
+      {{ conf.start_date | date: '%b %-d' }}
+    {% else %}
+      {{ conf.start_date | date: '%b %-d' }}–{{ conf.end_date | date: '%-d' }}
+    {% endif %}
+  {% else %}
+    {{ conf.start_date | date: '%b %-d' }}
+  {% endif %}
+{% endcapture %}
             {% assign conf_year = conf.start_date | date: "%Y" %}
             {% if conf_year != current_year %}
               {% if current_year != "" %}
@@ -50,26 +61,29 @@
               <div class="conference-item">
                 <details class="conference-detail">
                   <summary>
-                    <span class="conference-icon">{% case conf.role %}{% when 'talk' %}🎤{% when 'poster' %}📊{% when 'attended' %}👥{% endcase %}</span>
-                    <span class="conference-name">
-                      {% if conf.url %}
-                        <a href="{{ conf.url }}" target="_blank">{{ conf.name }}</a>
-                      {% else %}
-                        {{ conf.name }}
-                      {% endif %}
-                    </span>
-                    <span class="conference-date-label">
-                      {% if conf.end_date %}
-                        {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
-                          {{ conf.start_date | date: '%b %d' }}
-                        {% else %}
-                          {{ conf.start_date | date: '%b %d' }} – {{ conf.end_date | date: '%b %d' }}
-                        {% endif %}
-                      {% else %}
-                        {{ conf.start_date | date: '%b %d' }}
-                      {% endif %}
-                    </span>
-                  </summary>
+  <span class="conference-line">
+    <span class="conference-icon" aria-hidden="true">
+      {% case conf.role %}
+        {% when 'talk' %}🎤
+        {% when 'poster' %}📊
+        {% when 'attended' %}👥
+        {% else %}📍
+      {% endcase %}
+    </span>
+
+    <span class="conference-name">
+      {% if conf.url %}
+        <a href="{{ conf.url }}" target="_blank" rel="noopener">{{ conf.name }}</a>
+      {% else %}
+        {{ conf.name }}
+      {% endif %}
+    </span>
+
+    <span class="conference-sep"> – </span>
+    <span class="conference-date-label">{{ date_label | strip }}</span>
+  </span>
+</summary>
+
                   <div class="conference-details">
                     <p><strong>Dates:</strong> 
                       {% if conf.end_date %}
@@ -115,6 +129,18 @@
     {%- comment -%}Check if this year has any past conferences{%- endcomment -%}
     {% assign has_past_in_year = false %}
     {% for conf in sorted_confs %}
+      {% capture date_label %}
+  {% if conf.end_date %}
+    {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
+      {{ conf.start_date | date: '%b %-d' }}
+    {% else %}
+      {{ conf.start_date | date: '%b %-d' }}–{{ conf.end_date | date: '%-d' }}
+    {% endif %}
+  {% else %}
+    {{ conf.start_date | date: '%b %-d' }}
+  {% endif %}
+{% endcapture %}
+
       {% assign start_date_str = conf.start_date | date: "%Y-%m-%d" %}
       {% if start_date_str < today_date %}
         {% assign has_past_in_year = true %}
@@ -132,26 +158,29 @@
               <div class="conference-item">
                 <details class="conference-detail">
                   <summary>
-                    <span class="conference-icon">{% case conf.role %}{% when 'talk' %}🎤{% when 'poster' %}📊{% when 'attended' %}👥{% endcase %}</span>
-                    <span class="conference-name">
-                      {% if conf.url %}
-                        <a href="{{ conf.url }}" target="_blank">{{ conf.name }}</a>
-                      {% else %}
-                        {{ conf.name }}
-                      {% endif %}
-                    </span>
-                    <span class="conference-date-label">
-                      {% if conf.end_date %}
-                        {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
-                          {{ conf.start_date | date: '%b %d' }}
-                        {% else %}
-                          {{ conf.start_date | date: '%b %d' }} – {{ conf.end_date | date: '%b %d' }}
-                        {% endif %}
-                      {% else %}
-                        {{ conf.start_date | date: '%b %d' }}
-                      {% endif %}
-                    </span>
-                  </summary>
+  <span class="conference-line">
+    <span class="conference-icon" aria-hidden="true">
+      {% case conf.role %}
+        {% when 'talk' %}🎤
+        {% when 'poster' %}📊
+        {% when 'attended' %}👥
+        {% else %}📍
+      {% endcase %}
+    </span>
+
+    <span class="conference-name">
+      {% if conf.url %}
+        <a href="{{ conf.url }}" target="_blank" rel="noopener">{{ conf.name }}</a>
+      {% else %}
+        {{ conf.name }}
+      {% endif %}
+    </span>
+
+    <span class="conference-sep"> – </span>
+    <span class="conference-date-label">{{ date_label | strip }}</span>
+  </span>
+</summary>
+
                   <div class="conference-details">
                     <p><strong>Dates:</strong> 
                       {% if conf.end_date %}
