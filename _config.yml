@@ -164,8 +164,8 @@ collections:
     output: true
   projects:
     output: true
-  travel:
-    output: false
+  # travel:
+  #   output: false
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
