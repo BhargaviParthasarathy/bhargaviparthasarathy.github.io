@@ -9,6 +9,14 @@
 #   description: Additional details (optional)
 #   url: Link to conference website (optional)
 
+- name: 2026 AMS Spring Eastern Sectional Meeting
+  location: Boston
+  start_date: 2026-03-28
+  end_date: 2026-03-29
+  role: talk
+  #description:
+  url: https://www.ams.org/meetings/sectional/2331_program.html
+
 - name: 2026 Joint Mathematics Meetings
   location: Washington D.C.
   start_date: 2026-01-04
@@ -18,24 +26,49 @@
   description: Invited talk in the AMS Special Session on Recent Advances In Commutative Algebra
   url: https://jointmathematicsmeetings.org/jmm
 
-- name: Neural Information Processing Systems (NeurIPS)
-  location: Vancouver, Canada
-  start_date: 2025-12-10
-  end_date: 2025-12-15
-  role: poster
-  description: "Poster presentation on optimization techniques"
-  url: https://example.com/neurips2025
+- name: Commutative Algebra and Algebraic Geometry Seminar, CUNY Graduate Center
+  location: virtual
+  start_date: 2025-11-14
+  role: talk
+  talk_title: "Homomorphisms of maximal Cohen-Macaulay modules over the cone of an elliptic curve"
+  description: Presented my results about Hom
+  url: https://openlab.citytech.cuny.edu/caag/
 
-- name: Data Science Summit
-  location: San Francisco, USA
-  start_date: 2025-10-05
-  end_date: 2025-10-07
-  role: attended
-  description: "Attended keynotes on industry applications"
-  url: https://example.com/datasummit2025
+- name: CAAG Student Seminar, CUNY Graduate Center
+  location: virtual
+  start_date: 2026-11-13
+  role: talk
+  talk_title: "Matrix Factorizations: An Incomplete Summary"
+  description: Keynote presentation on scalable neural networks
+  url: https://sites.google.com/view/cunyagcastudentseminar/home
 
-- name: International Conference on Machine Learning
-  location: Vienna, Austria
+- name: Algebra Seminar, University of Connecticutt
+  location: virtual
+  start_date: 2025-11-12
+  role: talk
+  talk_title: "Homomorphisms of maximal Cohen-Macaulay modules over the cone of an elliptic curve"
+  #description: Keynote presentation on scalable neural networks
+  url: https://researchseminars.org/seminar/uconnalgebra
+
+- name: Arithmetic Geometry Seminar, Binghamton University
+  location: Binghamton, NY
+  start_date: 2025-11-04
+  role: talk
+  talk_title: "Homomorphisms of maximal Cohen-Macaulay modules over the cone of an elliptic curve"
+  #description: Keynote presentation on scalable neural networks
+  url: https://www2.math.binghamton.edu/p/seminars/arit
+
+- name: 2025 AMS Fall Eastern Virtual Sectional Meeting
+  location: virtual
+  start_date: 2025-10-25
+  end_date: 2025-10-26
+  role: talk
+  talk_title: "Homomorphisms of maximal Cohen-Macaulay modules over the cone of an elliptic curve"
+  #description: Keynote presentation on scalable neural networks
+  url: https://www.ams.org/meetings/sectional/2330_program.html
+
+- name: Algebra Seminar, Syracuse University
+  location: Syracuse, NY
   start_date: 2026-06-15
   end_date: 2026-06-18
   role: talk
@@ -106,38 +139,7 @@
   description: Keynote presentation on scalable neural networks
   url: https://example.com/icml2026
 
-- name: International Conference on Machine Learning
-  location: Vienna, Austria
-  start_date: 2026-06-15
-  end_date: 2026-06-18
-  role: talk
-  talk_title: "Deep Learning in Real-time Systems"
-  description: Keynote presentation on scalable neural networks
-  url: https://example.com/icml2026
 
-- name: International Conference on Machine Learning
-  location: Vienna, Austria
-  start_date: 2026-06-15
-  end_date: 2026-06-18
-  role: talk
-  talk_title: "Deep Learning in Real-time Systems"
-  description: Keynote presentation on scalable neural networks
-  url: https://example.com/icml2026
 
-- name: International Conference on Machine Learning
-  location: Vienna, Austria
-  start_date: 2026-06-15
-  end_date: 2026-06-18
-  role: talk
-  talk_title: "Deep Learning in Real-time Systems"
-  description: Keynote presentation on scalable neural networks
-  url: https://example.com/icml2026
-
-- name: International Conference on Machine Learning
-  location: Vienna, Austria
-  start_date: 2026-06-15
-  end_date: 2026-06-18
-  role: talk
-  talk_title: "Deep Learning in Real-time Systems"
-  description: Keynote presentation on scalable neural networks
-  url: https://example.com/icml2026
+    
+    

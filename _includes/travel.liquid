@@ -63,50 +63,53 @@
       </div>
     {% endif %}
     
-    <!-- Past Travel Section -->
+    <!-- Past Travel Section (grouped by year with collapsible details) -->
     {% if past.size > 0 %}
       <div class="past-travel">
         <h3>Past Conferences</h3>
         <div class="conference-list">
-          {% assign past_sorted = past | reverse %}
+          {% assign past_sorted = past | sort: 'start_date' | reverse %}
+          {% assign years = "" | split: "" %}
           {% for conf in past_sorted %}
-            <div class="conference-card">
-              <div class="conference-header">
-                <h4>
-                  {% if conf.url %}
-                    <a href="{{ conf.url }}" target="_blank">{{ conf.name }}</a>
-                  {% else %}
-                    {{ conf.name }}
+            {% assign y = conf.start_date | date: '%Y' %}
+            {% unless years contains y %}
+              {% assign years = years | push: y %}
+            {% endunless %}
+          {% endfor %}
+
+          {% for year in years %}
+            <div class="conference-year">
+              <h4>{{ year }}</h4>
+              <ul class="conference-names">
+                {% for conf in past_sorted %}
+                  {% if conf.start_date | date: '%Y' == year %}
+                    <li>
+                      <details class="conference-detail">
+                        <summary>
+                          {{ conf.name }}
+                          <span class="conference-mini-date"> — {{ conf.start_date | date: '%b %d' }}</span>
+                        </summary>
+                        <div class="conference-details">
+                          <p><strong>Dates:</strong> {{ conf.start_date | date: '%b %d, %Y' }} – {{ conf.end_date | date: '%b %d, %Y' }}</p>
+                          <p><strong>Location:</strong> {{ conf.location }}</p>
+                          {% if conf.role %}
+                            <p><strong>Role:</strong> <span class="role-badge role-{{ conf.role }}">{% case conf.role %}{% when 'talk' %}🎤 Presented Talk{% when 'poster' %}📊 Poster{% when 'attended' %}👥 Attended{% endcase %}</span></p>
+                          {% endif %}
+                          {% if conf.talk_title %}
+                            <p><strong>Talk:</strong> {{ conf.talk_title }}</p>
+                          {% endif %}
+                          {% if conf.description %}
+                            <p>{{ conf.description }}</p>
+                          {% endif %}
+                          {% if conf.url %}
+                            <p><a href="{{ conf.url }}" target="_blank">Conference website</a></p>
+                          {% endif %}
+                        </div>
+                      </details>
+                    </li>
                   {% endif %}
-                </h4>
-                <span class="conference-dates">
-                  {{ conf.start_date | date: '%b %d' }} – {{ conf.end_date | date: '%b %d, %Y' }}
-                </span>
-              </div>
-              <div class="conference-details">
-                <p><strong>Location:</strong> {{ conf.location }}</p>
-                {% if conf.role %}
-                  <p>
-                    <strong>Role:</strong> 
-                    <span class="role-badge role-{{ conf.role }}">
-                      {% case conf.role %}
-                        {% when 'talk' %}
-                          🎤 Presented Talk
-                        {% when 'poster' %}
-                          📊 Poster Presentation
-                        {% when 'attended' %}
-                          👥 Attended
-                      {% endcase %}
-                    </span>
-                  </p>
-                {% endif %}
-                {% if conf.talk_title %}
-                  <p><strong>Talk:</strong> {{ conf.talk_title }}</p>
-                {% endif %}
-                {% if conf.description %}
-                  <p>{{ conf.description }}</p>
-                {% endif %}
-              </div>
+                {% endfor %}
+              </ul>
             </div>
           {% endfor %}
         </div>
