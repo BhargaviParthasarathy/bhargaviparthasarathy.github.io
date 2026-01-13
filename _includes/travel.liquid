@@ -1,45 +1,59 @@
 <div class="travel-log">
-  {% if site.data.conferences %}
+  {% if site.travel %}
     {% assign today = "now" | date: "%s" | plus: 0 %}
-    {% assign upcoming = "" | split: "" %}
-    {% assign past = "" | split: "" %}
+    {% assign upcoming_list = "" | split: "" %}
+    {% assign past_years = site.travel | sort: "path" | reverse %}
     
-    <!-- Separate conferences into upcoming and past based on start_date -->
-    {% for conference in site.data.conferences %}
-      {% assign conf_date = conference.start_date | date: "%s" | plus: 0 %}
-      {% if conf_date >= today %}
-        {% assign upcoming = upcoming | push: conference %}
-      {% else %}
-        {% assign past = past | push: conference %}
+    <!-- Extract all upcoming and past conferences -->
+    {% for year_doc in past_years %}
+      {% if year_doc.conferences %}
+        {% for conf in year_doc.conferences %}
+          {% assign conf_date = conf.start_date | date: "%s" | plus: 0 %}
+          {% if conf_date >= today %}
+            {% assign upcoming_list = upcoming_list | push: conf %}
+          {% endif %}
+        {% endfor %}
       {% endif %}
     {% endfor %}
     
-    <!-- Upcoming Travel Section (collapsible details) -->
-    {% if upcoming.size > 0 %}
+    <!-- Upcoming Travel Section -->
+    {% if upcoming_list.size > 0 %}
       <div class="upcoming-travel">
         <h3>Upcoming Conferences</h3>
         <div class="conference-list">
-          {% assign upcoming_sorted = upcoming | sort: 'start_date' %}
+          {% assign upcoming_sorted = upcoming_list | sort: 'start_date' %}
           <ul class="conference-names">
             {% for conf in upcoming_sorted %}
               <li>
                 <details class="conference-detail">
                   <summary>
-                    {{ conf.name }}
+                    {% if conf.url %}
+                      <a href="{{ conf.url }}" target="_blank">{{ conf.name }}</a>
+                    {% else %}
+                      {{ conf.name }}
+                    {% endif %}
                     <span class="conference-mini-date"> — 
-                      {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
-                        {{ conf.start_date | date: '%b %d, %Y' }}
+                      {% if conf.end_date %}
+                        {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
+                          {{ conf.start_date | date: '%b %d, %Y' }}
+                        {% else %}
+                          {{ conf.start_date | date: '%b %d' }} – {{ conf.end_date | date: '%b %d, %Y' }}
+                        {% endif %}
                       {% else %}
-                        {{ conf.start_date | date: '%b %d' }} – {{ conf.end_date | date: '%b %d, %Y' }}
+                        {{ conf.start_date | date: '%b %d, %Y' }}
                       {% endif %}
                     </span>
                   </summary>
                   <div class="conference-details">
                     <p><strong>Dates:</strong> 
-                      {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
-                        {{ conf.start_date | date: '%b %d, %Y' }}
+                      {% if conf.end_date %}
+                        {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
+                          {{ conf.start_date | date: '%b %d, %Y' }}
+                        {% else %}
+                          {{ conf.start_date | date: '%b %d, %Y' }} – {{ conf.end_date | date: '%b %d, %Y' }}
+                        {% endif %}
                       {% else %}
-                        {{ conf.start_date | date: '%b %d, %Y' }} – {{ conf.end_date | date: '%b %d, %Y' }}
+                        {{ conf.start_date | date: '%b %d, %Y' }}
                       {% endif %}
                     </p>
                     <p><strong>Location:</strong> {{ conf.location }}</p>
@@ -64,35 +78,59 @@
       </div>
     {% endif %}
     
-    <!-- Past Travel Section (grouped by year with collapsible details) -->
-    {% if past.size > 0 %}
-      <div class="past-travel">
-        <h3>Past Conferences</h3>
-        <div class="conference-list">
-          {% assign past_sorted = past | sort: 'start_date' | reverse %}
-          {% assign years = "" | split: "" %}
-          {% for conf in past_sorted %}
-            {% assign y = conf.start_date | date: '%Y' %}
-            {% unless years contains y %}
-              {% assign years = years | push: y %}
-            {% endunless %}
+    <!-- Past Travel Section (grouped by year) -->
+    <div class="past-travel">
+      <h3>Past Conferences</h3>
+      <div class="conference-list">
+        {% for year_doc in past_years %}
+          {% assign year_upcoming_count = 0 %}
+          {% for conf in year_doc.conferences %}
+            {% assign conf_date = conf.start_date | date: "%s" | plus: 0 %}
+            {% if conf_date >= today %}
+              {% assign year_upcoming_count = year_upcoming_count | plus: 1 %}
+            {% endif %}
           {% endfor %}
-          {% assign years = years | sort | reverse %}
-
-          {% for year in years %}
+          
+          {% if year_doc.conferences and year_upcoming_count == 0 %}
             <div class="conference-year">
-              <h4>{{ year }}</h4>
+              <h4>{{ year_doc.year }}</h4>
               <ul class="conference-names">
-                {% for conf in past_sorted %}
-                  {% if conf.start_date | date: '%Y' == year %}
+                {% assign sorted_confs = year_doc.conferences | sort: 'start_date' | reverse %}
+                {% for conf in sorted_confs %}
+                  {% assign conf_date = conf.start_date | date: "%s" | plus: 0 %}
+                  {% if conf_date < today %}
                     <li>
                       <details class="conference-detail">
                         <summary>
-                          {{ conf.name }}
-                          <span class="conference-mini-date"> — {{ conf.start_date | date: '%b %d' }}</span>
+                          {% if conf.url %}
+                            <a href="{{ conf.url }}" target="_blank">{{ conf.name }}</a>
+                          {% else %}
+                            {{ conf.name }}
+                          {% endif %}
+                          <span class="conference-mini-date"> — 
+                            {% if conf.end_date %}
+                              {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
+                                {{ conf.start_date | date: '%b %d, %Y' }}
+                              {% else %}
+                                {{ conf.start_date | date: '%b %d' }} – {{ conf.end_date | date: '%b %d, %Y' }}
+                              {% endif %}
+                            {% else %}
+                              {{ conf.start_date | date: '%b %d, %Y' }}
+                            {% endif %}
+                          </span>
                         </summary>
                         <div class="conference-details">
-                          <p><strong>Dates:</strong> {{ conf.start_date | date: '%b %d, %Y' }} – {{ conf.end_date | date: '%b %d, %Y' }}</p>
+                          <p><strong>Dates:</strong> 
+                            {% if conf.end_date %}
+                              {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
+                                {{ conf.start_date | date: '%b %d, %Y' }}
+                              {% else %}
+                                {{ conf.start_date | date: '%b %d, %Y' }} – {{ conf.end_date | date: '%b %d, %Y' }}
+                              {% endif %}
+                            {% else %}
+                              {{ conf.start_date | date: '%b %d, %Y' }}
+                            {% endif %}
+                          </p>
                           <p><strong>Location:</strong> {{ conf.location }}</p>
                           {% if conf.role %}
                             <p><strong>Role:</strong> <span class="role-badge role-{{ conf.role }}">{% case conf.role %}{% when 'talk' %}🎤 Presented Talk{% when 'poster' %}📊 Poster{% when 'attended' %}👥 Attended{% endcase %}</span></p>
@@ -113,13 +151,13 @@
                 {% endfor %}
               </ul>
             </div>
-          {% endfor %}
-        </div>
+          {% endif %}
+        {% endfor %}
       </div>
-    {% endif %}
+    </div>
     
     <!-- No travel message -->
-    {% if upcoming.size == 0 and past.size == 0 %}
+    {% if upcoming_list.size == 0 %}
       <p>No conferences logged yet.</p>
     {% endif %}
   {% else %}
