@@ -8,10 +8,10 @@
     <div class="travel-legend" style="float: right; margin-left: 2rem; margin-bottom: 1rem; padding: 1rem; border: 1px solid var(--global-divider-color); border-radius: 6px; background: var(--global-bg-color); max-width: 200px;">
       <h4 style="margin-top: 0; margin-bottom: 0.75rem; font-size: 0.95rem;">Key</h4>
       <div style="font-size: 0.85rem; line-height: 1.8;">
-        <div>🎤 Gave a talk</div>
-        <div>📊 Presented a poster</div>
-        <div>👥 Attended</div>
-        <div>* Virtual</div>
+        <div style="display: flex; align-items: center;"><span style="display: inline-block; width: 2em; text-align: center;">🎤</span><span style="text-align: left;">Gave a talk</span></div>
+        <div style="display: flex; align-items: center;"><span style="display: inline-block; width: 2em; text-align: center;">📊</span><span style="text-align: left;">Presented a poster</span></div>
+        <div style="display: flex; align-items: center;"><span style="display: inline-block; width: 2em; text-align: center;">👥</span><span style="text-align: left;">Attended</span></div>
+        <div style="display: flex; align-items: center;"><span style="display: inline-block; width: 2em; text-align: center;">*</span><span style="text-align: left;">Virtual</span></div>
       </div>
     </div>
     
@@ -114,7 +114,7 @@
     {% if has_past_in_year %}
       {% assign past_year_count = past_year_count | plus: 1 %}
       <div class="conference-year">
-        <details class="year-details"{% if past_year_count <= 2 %} open{% endif %}>
+        <details class="year-details"{% if past_year_count <= 3 %} open{% endif %}>
           <summary>
             <h4 style="display: inline;">{{ year_doc.year }}</h4>
           </summary>
@@ -177,11 +177,6 @@
     {% if upcoming_list.size == 0 and past_count == 0 %}
   <p>No conferences logged yet.</p>
 {% endif %}
-
-    <!-- Virtual conference note -->
-    <div class="virtual-note" style="margin-top: 2rem; font-size: 0.9rem; color: var(--global-text-color-light); font-style: italic;">
-      <p>* Indicates a virtual conference</p>
-    </div>
   {% else %}
     <p>No conference data available.</p>
   {% endif %}
