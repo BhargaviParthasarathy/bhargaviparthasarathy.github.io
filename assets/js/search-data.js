@@ -418,8 +418,8 @@ ninja.data = [{
           description: "",
           section: "Travel",handler: () => {
               window.location.href = "/travel/2020/";
-            },},{id: "travel-",
-          title: '',
+            },},{id: "travel-2021",
+          title: '2021',
           description: "",
           section: "Travel",handler: () => {
               window.location.href = "/travel/2021/";
