@@ -205,6 +205,11 @@ details.conference-detail[open] {
   border-radius: 0.25rem;
 }
 
+.conference-attended {
+  padding: 0.5rem 0;
+  font-weight: 600;
+}
+
 .conference-mini-date {
   color: var(--global-text-color-secondary);
   font-weight: 500;
