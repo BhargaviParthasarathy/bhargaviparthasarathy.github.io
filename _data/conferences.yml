@@ -172,6 +172,20 @@
   role: attended
   url: https://mathanddata.wvu.edu/mad
 
+- name: 2023 AMS Fall Central Sectional Meeting
+  location: Creighton University
+  start_date: 2023-10-07
+  end_date: 2023-10-08
+  role: attended
+  url: https://www.ams.org/meetings/sectional/2307_program.html
+
+- name: 2024 AMS Fall Eastern Sectional Meeting 
+  location: University at Albany
+  start_date: 2024-10-19
+  end_date: 2024-10-20
+  role: attended
+  url: https://www.ams.org/meetings/sectional/2317_program.html
+
 - name: 45th Annual New York State Regional Graduate Mathematics Conference (ANYSRGMC)
   location: Syracuse University
   start_date: 2020-03-28
@@ -184,66 +198,3 @@
   role: attended
   url: https://mgo.syr.edu/conferences/past-conferences/2020-conference/
 
-- name: 45th Annual New York State Regional Graduate Mathematics Conference (ANYSRGMC)
-  location: Syracuse University
-  start_date: 2020-03-28
-  role: attended
-  url: https://mgo.syr.edu/conferences/past-conferences/2020-conference/
-
-- name: 45th Annual New York State Regional Graduate Mathematics Conference (ANYSRGMC)
-  location: Syracuse University
-  start_date: 2020-03-28
-  role: attended
-  url: https://mgo.syr.edu/conferences/past-conferences/2020-conference/
-
-
-\section{Contributed Talks}
-
-
-\section{Workshops Attended}
-\begin{twocolentry}{May 2023}
-\textbf{Commutative Algebra and its Interaction with Algebraic Geometry} \\
-CMND, Notre Dame and SLMath, Berkeley  
-\end{twocolentry}
-\vspace{0.1cm}
-
-
-\begin{twocolentry}{Apr 2021}
-\textbf{Women and Mathematics: Representation theory and categorification} \\
-Institute of Advanced Study, Princeton  
-\end{twocolentry}
-
-\section{Conferences Attended}
-
-
-\begin{twocolentry}{Nov 2024}
-    Route 81, Cornell University 
-\end{twocolentry}
-
-\begin{twocolentry}{Oct 2024}
-    AMS Fall Eastern Sectional Meeting, University at Albany 
-\end{twocolentry}
-
-
-\begin{twocolentry}{Mar 2024}
-    Fairfax Algebra Days, George Mason University
-\end{twocolentry}
-
-\begin{twocolentry}{Jan 2024}
-Introductory Workshop: Commutative Algebra, SLMath, Berkeley   
-\end{twocolentry}
-
-\begin{twocolentry}{Jan 2024}
-Connections Workshop: Commutative Algebra, SLMath, Berkeley   
-\end{twocolentry}
-\begin{twocolentry}{Nov 2023}
-    Route 81, Syracuse University
-\end{twocolentry}
-
- \begin{twocolentry}{Oct 2023}
-     AMS Fall Central Sectional Meeting, Creighton University 
- \end{twocolentry}
-
-\begin{twocolentry}{Sep 2023}
-   KUMUNU, University of Missouri
-\end{twocolentry}
