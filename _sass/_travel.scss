@@ -207,7 +207,10 @@ details.conference-detail[open] {
 
 .conference-attended {
   padding: 0.5rem 0;
-  font-weight: 600;
+  
+  .conference-line {
+    font-weight: 600;
+  }
 }
 
 .conference-mini-date {
