@@ -42,7 +42,7 @@
     <!-- Upcoming Travel Section -->
     {% if upcoming_list.size > 0 %}
       <div class="upcoming-travel">
-        <h3>Upcoming Conferences</h3>
+        <h3>Upcoming</h3>
         <div class="conference-list">
           {% assign upcoming_sorted = upcoming_list | sort: 'start_date' %}
           {% for conf in upcoming_sorted %}
@@ -102,7 +102,7 @@
     
     <!-- Past Travel Section (grouped by year) -->
     <div class="past-travel">
-      <h3>Past Conferences</h3>
+      <h3>Past</h3>
       <div class="conference-list">
         {% assign past_year_count = 0 %}
         {% for year_doc in past_years %}
