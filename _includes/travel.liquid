@@ -36,17 +36,19 @@
           {% assign upcoming_sorted = upcoming_list | sort: 'start_date' %}
           {% assign current_year = "" %}
           {% for conf in upcoming_sorted %}
-          {% capture date_label %}
-  {% if conf.end_date %}
-    {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
-      {{ conf.start_date | date: '%b %-d' }}
-    {% else %}
-      {{ conf.start_date | date: '%b %-d' }}–{{ conf.end_date | date: '%-d' }}
-    {% endif %}
-  {% else %}
-    {{ conf.start_date | date: '%b %-d' }}
-  {% endif %}
-{% endcapture %}
+            {% capture date_label %}
+              {% if conf.end_date %}
+                {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
+                  {{ conf.start_date | date: '%b %-d' }}
+                {% elsif conf.start_date | date: '%b' == conf.end_date | date: '%b' %}
+                  {{ conf.start_date | date: '%b %-d' }}–{{ conf.end_date | date: '%-d' }}
+                {% else %}
+                  {{ conf.start_date | date: '%b %-d' }}–{{ conf.end_date | date: '%b %-d' }}
+                {% endif %}
+              {% else %}
+                {{ conf.start_date | date: '%b %-d' }}
+              {% endif %}
+            {% endcapture %}
             {% assign conf_year = conf.start_date | date: "%Y" %}
             {% if conf_year != current_year %}
               {% if current_year != "" %}
@@ -129,18 +131,6 @@
     {%- comment -%}Check if this year has any past conferences{%- endcomment -%}
     {% assign has_past_in_year = false %}
     {% for conf in sorted_confs %}
-      {% capture date_label %}
-  {% if conf.end_date %}
-    {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
-      {{ conf.start_date | date: '%b %-d' }}
-    {% else %}
-      {{ conf.start_date | date: '%b %-d' }}–{{ conf.end_date | date: '%-d' }}
-    {% endif %}
-  {% else %}
-    {{ conf.start_date | date: '%b %-d' }}
-  {% endif %}
-{% endcapture %}
-
       {% assign start_date_str = conf.start_date | date: "%Y-%m-%d" %}
       {% if start_date_str < today_date %}
         {% assign has_past_in_year = true %}
@@ -155,6 +145,19 @@
           {% for conf in sorted_confs %}
             {% assign start_date_str = conf.start_date | date: "%Y-%m-%d" %}
             {% if start_date_str < today_date %}
+              {% capture date_label %}
+                {% if conf.end_date %}
+                  {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
+                    {{ conf.start_date | date: '%b %-d' }}
+                  {% elsif conf.start_date | date: '%b' == conf.end_date | date: '%b' %}
+                    {{ conf.start_date | date: '%b %-d' }}–{{ conf.end_date | date: '%-d' }}
+                  {% else %}
+                    {{ conf.start_date | date: '%b %-d' }}–{{ conf.end_date | date: '%b %-d' }}
+                  {% endif %}
+                {% else %}
+                  {{ conf.start_date | date: '%b %-d' }}
+                {% endif %}
+              {% endcapture %}
               <div class="conference-item">
                 <details class="conference-detail">
                   <summary>
