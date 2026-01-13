@@ -178,12 +178,6 @@
 .conference-date-label {
   font-weight: 600;
   color: var(--global-text-color);
-  margin-right: 0.5rem;
-}
-
-.conference-date-label::after {
-  content: ':';
-  margin-right: 0.3rem;
 }
 
 .conference-name {
