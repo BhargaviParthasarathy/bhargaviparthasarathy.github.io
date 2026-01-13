@@ -1,0 +1,71 @@
+<div class="travel-log">
+  {% if site.travel != blank %}
+    {% assign today = "now" | date: "%s" %}
+    {% assign upcoming_travel = "" | split: "" %}
+    {% assign past_travel = "" | split: "" %}
+    
+    <!-- Separate travel items into upcoming and past -->
+    {% for item in site.travel %}
+      {% assign item_date = item.date | date: "%s" %}
+      {% if item_date >= today %}
+        {% assign upcoming_travel = upcoming_travel | push: item %}
+      {% else %}
+        {% assign past_travel = past_travel | push: item %}
+      {% endif %}
+    {% endfor %}
+    
+    <!-- Upcoming Travel Section -->
+    {% if upcoming_travel.size > 0 %}
+      <div class="upcoming-travel">
+        <h3>Upcoming Travel</h3>
+        <div class="table-responsive">
+          <table class="table table-sm table-borderless">
+            {% for item in upcoming_travel %}
+              <tr>
+                <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th>
+                <td>
+                  {% if item.inline %}
+                    {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+                  {% else %}
+                    <a class="travel-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                  {% endif %}
+                </td>
+              </tr>
+            {% endfor %}
+          </table>
+        </div>
+      </div>
+    {% endif %}
+    
+    <!-- Past Travel Section -->
+    {% if past_travel.size > 0 %}
+      <div class="past-travel">
+        <h3>Past Travel</h3>
+        <div class="table-responsive">
+          <table class="table table-sm table-borderless">
+            {% assign past_travel_sorted = past_travel | reverse %}
+            {% for item in past_travel_sorted %}
+              <tr>
+                <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th>
+                <td>
+                  {% if item.inline %}
+                    {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+                  {% else %}
+                    <a class="travel-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                  {% endif %}
+                </td>
+              </tr>
+            {% endfor %}
+          </table>
+        </div>
+      </div>
+    {% endif %}
+    
+    <!-- No travel message -->
+    {% if upcoming_travel.size == 0 and past_travel.size == 0 %}
+      <p>No travel scheduled...</p>
+    {% endif %}
+  {% else %}
+    <p>No travel logged so far...</p>
+  {% endif %}
+</div>
