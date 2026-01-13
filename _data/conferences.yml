@@ -84,59 +84,166 @@
   #description: Keynote presentation on scalable neural networks
   url: https://awm-math.org/meetings/awm-research-symposium/
 
-- name: International Conference on Machine Learning
-  location: Vienna, Austria
+- name: Binghamton University Graduate Combinatorics, Algebra, and Topology Conference (BUGCAT)
+  location: Binghamton University
+  start_date: 2025-11-15
+  end_date: 2025-11-16
+  role: talk
+  talk_title: "Homomorphisms of maximal Cohen-Macaulay modules over the cone of an elliptic curve"
+  #description: Keynote presentation on scalable neural networks
+  url: https://sites.google.com/binghamton.edu/bugcat-website/home
+
+- name: Working ALgebra Knowledge Seminar (WALKS)
+  location: Syracuse University
   start_date: 2026-06-15
   end_date: 2026-06-18
   role: talk
-  talk_title: "Deep Learning in Real-time Systems"
-  description: Keynote presentation on scalable neural networks
-  url: https://example.com/icml2026
+  talk_title: "Maximal Cohen-Macaulay modules and the elliptic group law"
+  # description: Keynote presentation on scalable neural networks
+  # url: https://example.com/icml2026
 
-- name: International Conference on Machine Learning
-  location: Vienna, Austria
-  start_date: 2026-06-15
-  end_date: 2026-06-18
+- name: 50th Annual New York State Regional Graduate Mathematics Conference (ANYSRGMC)
+  location: Syracuse University
+  start_date: 2025-03-28
+  end_date: 2025-03-29
   role: talk
-  talk_title: "Deep Learning in Real-time Systems"
-  description: Keynote presentation on scalable neural networks
-  url: https://example.com/icml2026
+  talk_title: "Homomorphisms of Maximal Cohen-Macaulay Modules over the cone of an elliptic curve"
+  # description: Keynote presentation on scalable neural networks
+  url: https://mgo.syr.edu/conferences/past-conferences/2025-conference/
 
-- name: International Conference on Machine Learning
-  location: Vienna, Austria
-  start_date: 2026-06-15
-  end_date: 2026-06-18
+- name: Working ALgebra Knowledge Seminar (WALKS)
+  location: Syracuse University
+  start_date: 2025-01-29
   role: talk
-  talk_title: "Deep Learning in Real-time Systems"
-  description: Keynote presentation on scalable neural networks
-  url: https://example.com/icml2026
+  talk_title: "Matrix Factorizations: An Incomplete Summary"
+  # description: Keynote presentation on scalable neural networks
+  # url: https://example.com/icml2026
 
-- name: International Conference on Machine Learning
-  location: Vienna, Austria
-  start_date: 2026-06-15
-  end_date: 2026-06-18
+- name: Working ALgebra Knowledge Seminar (WALKS)
+  location: Syracuse University
+  start_date: 2023-10-31
   role: talk
-  talk_title: "Deep Learning in Real-time Systems"
-  description: Keynote presentation on scalable neural networks
-  url: https://example.com/icml2026
+  talk_title: "AR Sequences"
+  # description: Keynote presentation on scalable neural networks
+  # url: https://example.com/icml2026
 
-- name: International Conference on Machine Learning
-  location: Vienna, Austria
-  start_date: 2026-06-15
-  end_date: 2026-06-18
+- name: MGO Graduate Colloquium
+  location: Syracuse University
+  start_date: 2023-04-25
   role: talk
-  talk_title: "Deep Learning in Real-time Systems"
-  description: Keynote presentation on scalable neural networks
-  url: https://example.com/icml2026
+  talk_title: "AR sequences and Cohen-Macaulay modules"
+  # description: Keynote presentation on scalable neural networks
+  # url: https://example.com/icml2026
 
-- name: International Conference on Machine Learning
-  location: Vienna, Austria
-  start_date: 2026-06-15
-  end_date: 2026-06-18
-  role: talk
-  talk_title: "Deep Learning in Real-time Systems"
-  description: Keynote presentation on scalable neural networks
-  url: https://example.com/icml2026
+- name: 49th Annual New York State Regional Graduate Mathematics Conference (ANYSRGMC)
+  location: Syracuse University
+  start_date: 2024-03-25
+  role: attended
+  url: https://mgo.syr.edu/conferences/past-conferences/2024-conference/
+
+- name: 48th Annual New York State Regional Graduate Mathematics Conference (ANYSRGMC)
+  location: Syracuse University
+  start_date: 2023-04-01
+  role: attended
+  url: https://mgo.syr.edu/conferences/past-conferences/2023-conference/
+
+- name: 47th Annual New York State Regional Graduate Mathematics Conference (ANYSRGMC)
+  location: Syracuse University
+  start_date: 2022-04-02
+  role: attended
+  url: https://mgo.syr.edu/conferences/past-conferences/2022-conference/
+
+- name: 46th Annual New York State Regional Graduate Mathematics Conference (ANYSRGMC)
+  location: Syracuse University
+  start_date: 2021-04-10
+  role: attended
+  url: https://mgo.syr.edu/conferences/past-conferences/2021-conference/
+
+- name: 45th Annual New York State Regional Graduate Mathematics Conference (ANYSRGMC)
+  location: Syracuse University
+  start_date: 2020-03-28
+  role: attended
+  url: https://mgo.syr.edu/conferences/past-conferences/2020-conference/
+
+- name: Morgantown Algebra Days
+  location: West Virginia University
+  start_date: 2023-04-22
+  end_date: 2023-04-23
+  role: attended
+  url: https://mathanddata.wvu.edu/mad
+
+- name: 45th Annual New York State Regional Graduate Mathematics Conference (ANYSRGMC)
+  location: Syracuse University
+  start_date: 2020-03-28
+  role: attended
+  url: https://mgo.syr.edu/conferences/past-conferences/2020-conference/
+
+- name: 45th Annual New York State Regional Graduate Mathematics Conference (ANYSRGMC)
+  location: Syracuse University
+  start_date: 2020-03-28
+  role: attended
+  url: https://mgo.syr.edu/conferences/past-conferences/2020-conference/
+
+- name: 45th Annual New York State Regional Graduate Mathematics Conference (ANYSRGMC)
+  location: Syracuse University
+  start_date: 2020-03-28
+  role: attended
+  url: https://mgo.syr.edu/conferences/past-conferences/2020-conference/
+
+- name: 45th Annual New York State Regional Graduate Mathematics Conference (ANYSRGMC)
+  location: Syracuse University
+  start_date: 2020-03-28
+  role: attended
+  url: https://mgo.syr.edu/conferences/past-conferences/2020-conference/
 
 
+\section{Contributed Talks}
 
+
+\section{Workshops Attended}
+\begin{twocolentry}{May 2023}
+\textbf{Commutative Algebra and its Interaction with Algebraic Geometry} \\
+CMND, Notre Dame and SLMath, Berkeley  
+\end{twocolentry}
+\vspace{0.1cm}
+
+
+\begin{twocolentry}{Apr 2021}
+\textbf{Women and Mathematics: Representation theory and categorification} \\
+Institute of Advanced Study, Princeton  
+\end{twocolentry}
+
+\section{Conferences Attended}
+
+
+\begin{twocolentry}{Nov 2024}
+    Route 81, Cornell University 
+\end{twocolentry}
+
+\begin{twocolentry}{Oct 2024}
+    AMS Fall Eastern Sectional Meeting, University at Albany 
+\end{twocolentry}
+
+
+\begin{twocolentry}{Mar 2024}
+    Fairfax Algebra Days, George Mason University
+\end{twocolentry}
+
+\begin{twocolentry}{Jan 2024}
+Introductory Workshop: Commutative Algebra, SLMath, Berkeley   
+\end{twocolentry}
+
+\begin{twocolentry}{Jan 2024}
+Connections Workshop: Commutative Algebra, SLMath, Berkeley   
+\end{twocolentry}
+\begin{twocolentry}{Nov 2023}
+    Route 81, Syracuse University
+\end{twocolentry}
+
+ \begin{twocolentry}{Oct 2023}
+     AMS Fall Central Sectional Meeting, Creighton University 
+ \end{twocolentry}
+
+\begin{twocolentry}{Sep 2023}
+   KUMUNU, University of Missouri
+\end{twocolentry}
