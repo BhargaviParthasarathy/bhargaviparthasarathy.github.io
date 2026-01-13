@@ -49,9 +49,9 @@
             {% capture date_label %}
               {% if conf.end_date %}
                 {% if conf.start_date | date: '%b' == conf.end_date | date: '%b' %}
-                  {{ conf.start_date | date: '%b %-d' }} – {{ conf.end_date | date: '%-d' }}
+                  {{ conf.start_date | date: '%b %-d' }}–{{ conf.end_date | date: '%-d' }}
                 {% else %}
-                  {{ conf.start_date | date: '%b %-d' }} – {{ conf.end_date | date: '%b %-d' }}
+                  {{ conf.start_date | date: '%b %-d' }}–{{ conf.end_date | date: '%b %-d' }}
                 {% endif %}
               {% else %}
                 {{ conf.start_date | date: '%b %-d' }}
@@ -135,9 +135,9 @@
                 {% capture date_label %}
                   {% if conf.end_date %}
                     {% if conf.start_date | date: '%b' == conf.end_date | date: '%b' %}
-                      {{ conf.start_date | date: '%b %-d' }} – {{ conf.end_date | date: '%-d' }}
+                      {{ conf.start_date | date: '%b %-d' }}–{{ conf.end_date | date: '%-d' }}
                     {% else %}
-                      {{ conf.start_date | date: '%b %-d' }} – {{ conf.end_date | date: '%b %-d' }}
+                      {{ conf.start_date | date: '%b %-d' }}–{{ conf.end_date | date: '%b %-d' }}
                     {% endif %}
                   {% else %}
                     {{ conf.start_date | date: '%b %-d' }}
