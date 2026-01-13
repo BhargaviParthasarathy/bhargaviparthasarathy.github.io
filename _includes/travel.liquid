@@ -39,6 +39,13 @@
                 <details class="conference-detail">
                   <summary>
                     <span class="conference-icon">{% case conf.role %}{% when 'talk' %}🎤{% when 'poster' %}📊{% when 'attended' %}👥{% endcase %}</span>
+                    <span class="conference-name">
+                      {% if conf.url %}
+                        <a href="{{ conf.url }}" target="_blank">{{ conf.name }}</a>
+                      {% else %}
+                        {{ conf.name }}
+                      {% endif %}
+                    </span>
                     <span class="conference-date-label">
                       {% if conf.end_date %}
                         {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
@@ -48,13 +55,6 @@
                         {% endif %}
                       {% else %}
                         {{ conf.start_date | date: '%b %d' }}
-                      {% endif %}
-                    </span>
-                    <span class="conference-name">
-                      {% if conf.url %}
-                        <a href="{{ conf.url }}" target="_blank">{{ conf.name }}</a>
-                      {% else %}
-                        {{ conf.name }}
                       {% endif %}
                     </span>
                   </summary>
@@ -79,9 +79,6 @@
                     {% endif %}
                     {% if conf.description %}
                       <p>{{ conf.description }}</p>
-                    {% endif %}
-                    {% if conf.url %}
-                      <p><a href="{{ conf.url }}" target="_blank">Conference website</a></p>
                     {% endif %}
                   </div>
                 </details>
@@ -120,6 +117,13 @@
                       <details class="conference-detail">
                         <summary>
                           <span class="conference-icon">{% case conf.role %}{% when 'talk' %}🎤{% when 'poster' %}📊{% when 'attended' %}👥{% endcase %}</span>
+                          <span class="conference-name">
+                            {% if conf.url %}
+                              <a href="{{ conf.url }}" target="_blank">{{ conf.name }}</a>
+                            {% else %}
+                              {{ conf.name }}
+                            {% endif %}
+                          </span>
                           <span class="conference-date-label">
                             {% if conf.end_date %}
                               {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
@@ -129,13 +133,6 @@
                               {% endif %}
                             {% else %}
                               {{ conf.start_date | date: '%b %d' }}
-                            {% endif %}
-                          </span>
-                          <span class="conference-name">
-                            {% if conf.url %}
-                              <a href="{{ conf.url }}" target="_blank">{{ conf.name }}</a>
-                            {% else %}
-                              {{ conf.name }}
                             {% endif %}
                           </span>
                         </summary>
@@ -160,9 +157,6 @@
                           {% endif %}
                           {% if conf.description %}
                             <p>{{ conf.description }}</p>
-                          {% endif %}
-                          {% if conf.url %}
-                            <p><a href="{{ conf.url }}" target="_blank">Conference website</a></p>
                           {% endif %}
                         </div>
                       </details>
