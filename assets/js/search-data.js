@@ -457,6 +457,41 @@ ninja.data = [{
           description: "another project with an image 🎉",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
+            },},{id: "travel-2020",
+          title: '2020',
+          description: "",
+          section: "Travel",handler: () => {
+              window.location.href = "/travel/2020/";
+            },},{id: "travel-",
+          title: '',
+          description: "",
+          section: "Travel",handler: () => {
+              window.location.href = "/travel/2021/";
+            },},{id: "travel-2022",
+          title: '2022',
+          description: "",
+          section: "Travel",handler: () => {
+              window.location.href = "/travel/2022/";
+            },},{id: "travel-2023",
+          title: '2023',
+          description: "",
+          section: "Travel",handler: () => {
+              window.location.href = "/travel/2023/";
+            },},{id: "travel-",
+          title: '',
+          description: "",
+          section: "Travel",handler: () => {
+              window.location.href = "/travel/2024/";
+            },},{id: "travel-2025",
+          title: '2025',
+          description: "",
+          section: "Travel",handler: () => {
+              window.location.href = "/travel/2025/";
+            },},{id: "travel-2026",
+          title: '2026',
+          description: "",
+          section: "Travel",handler: () => {
+              window.location.href = "/travel/2026/";
             },},{
         id: 'social-cv',
         title: 'CV',
