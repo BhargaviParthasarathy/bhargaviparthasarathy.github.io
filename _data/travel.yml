@@ -1,0 +1,19 @@
+past_travel:
+  - title: "Conference/Event Name"
+    location: "City, Country"
+    date: "Month Year"
+    description: "Brief description of your travel experience, key highlights, or what you did there."
+    highlights:
+      - "Highlight 1"
+      - "Highlight 2"
+    type: "conference" # conference, research, personal, etc.
+
+upcoming_travel:
+  - title: "Conference/Event Name"
+    location: "City, Country"
+    date: "Month Year"
+    description: "Brief description of what you plan to do there."
+    highlights:
+      - "Highlight 1"
+      - "Highlight 2"
+    type: "conference" # conference, research, personal, etc.
