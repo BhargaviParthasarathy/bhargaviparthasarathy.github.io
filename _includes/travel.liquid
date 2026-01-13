@@ -25,12 +25,20 @@
               <li>
                 <details class="conference-detail">
                   <summary>
-                    {{ conf.name }}
+                    {% if conf.url %}
+                      <a href="{{ conf.url }}" target="_blank">{{ conf.name }}</a>
+                    {% else %}
+                      {{ conf.name }}
+                    {% endif %}
                     <span class="conference-mini-date"> — 
-                      {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
-                        {{ conf.start_date | date: '%b %d, %Y' }}
+                      {% if conf.end_date %}
+                        {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
+                          {{ conf.start_date | date: '%b %d, %Y' }}
+                        {% else %}
+                          {{ conf.start_date | date: '%b %d' }} – {{ conf.end_date | date: '%b %d, %Y' }}
+                        {% endif %}
                       {% else %}
-                        {{ conf.start_date | date: '%b %d' }} – {{ conf.end_date | date: '%b %d, %Y' }}
+                        {{ conf.start_date | date: '%b %d, %Y' }}
                       {% endif %}
                     </span>
                   </summary>
@@ -88,8 +96,22 @@
                     <li>
                       <details class="conference-detail">
                         <summary>
-                          {{ conf.name }}
-                          <span class="conference-mini-date"> — {{ conf.start_date | date: '%b %d' }}</span>
+                          {% if conf.url %}
+                            <a href="{{ conf.url }}" target="_blank">{{ conf.name }}</a>
+                          {% else %}
+                            {{ conf.name }}
+                          {% endif %}
+                          <span class="conference-mini-date"> — 
+                            {% if conf.end_date %}
+                              {% if conf.start_date | date: '%Y%m%d' == conf.end_date | date: '%Y%m%d' %}
+                                {{ conf.start_date | date: '%b %d, %Y' }}
+                              {% else %}
+                                {{ conf.start_date | date: '%b %d' }} – {{ conf.end_date | date: '%b %d, %Y' }}
+                              {% endif %}
+                            {% else %}
+                              {{ conf.start_date | date: '%b %d, %Y' }}
+                            {% endif %}
+                          </span>
                         </summary>
                         <div class="conference-details">
                           <p><strong>Dates:</strong> {{ conf.start_date | date: '%b %d, %Y' }} – {{ conf.end_date | date: '%b %d, %Y' }}</p>
