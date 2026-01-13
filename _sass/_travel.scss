@@ -141,6 +141,18 @@
   gap: 0.5rem;
 }
 
+.conference-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.conference-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
 details.conference-detail summary {
   cursor: pointer;
   padding: 0.5rem 0;

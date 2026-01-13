@@ -22,11 +22,12 @@
         <h3>Upcoming Conferences</h3>
         <div class="conference-list">
           {% assign upcoming_sorted = upcoming_list | sort: 'start_date' %}
-          <ul class="conference-names">
+          <div class="conference-names">
             {% for conf in upcoming_sorted %}
-              <li>
+              <div class="conference-item">
                 <details class="conference-detail">
                   <summary>
+                    <span class="conference-icon">{% case conf.role %}{% when 'talk' %}🎤{% when 'poster' %}📊{% when 'attended' %}👥{% endcase %}</span>
                     {% if conf.url %}
                       <a href="{{ conf.url }}" target="_blank">{{ conf.name }}</a>
                     {% else %}
@@ -71,9 +72,9 @@
                     {% endif %}
                   </div>
                 </details>
-              </li>
+              </div>
             {% endfor %}
-          </ul>
+          </div>
         </div>
       </div>
     {% endif %}
@@ -94,14 +95,15 @@
           {% if year_doc.conferences and year_upcoming_count == 0 %}
             <div class="conference-year">
               <h4>{{ year_doc.year }}</h4>
-              <ul class="conference-names">
+              <div class="conference-names">
                 {% assign sorted_confs = year_doc.conferences | sort: 'start_date' | reverse %}
                 {% for conf in sorted_confs %}
                   {% assign conf_date = conf.start_date | date: "%s" | plus: 0 %}
                   {% if conf_date < today %}
-                    <li>
+                    <div class="conference-item">
                       <details class="conference-detail">
                         <summary>
+                          <span class="conference-icon">{% case conf.role %}{% when 'talk' %}🎤{% when 'poster' %}📊{% when 'attended' %}👥{% endcase %}</span>
                           {% if conf.url %}
                             <a href="{{ conf.url }}" target="_blank">{{ conf.name }}</a>
                           {% else %}
@@ -146,10 +148,10 @@
                           {% endif %}
                         </div>
                       </details>
-                    </li>
+                    </div>
                   {% endif %}
                 {% endfor %}
-              </ul>
+              </div>
             </div>
           {% endif %}
         {% endfor %}
