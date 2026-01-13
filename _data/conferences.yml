@@ -36,7 +36,7 @@
 
 - name: CAAG Student Seminar, CUNY Graduate Center
   location: virtual
-  start_date: 2026-11-13
+  start_date: 2025-11-13
   role: talk
   talk_title: "Matrix Factorizations: An Incomplete Summary"
   description: Keynote presentation on scalable neural networks
@@ -95,8 +95,7 @@
 
 - name: Working ALgebra Knowledge Seminar (WALKS)
   location: Syracuse University
-  start_date: 2026-06-15
-  end_date: 2026-06-18
+  start_date: 2025-09-02
   role: talk
   talk_title: "Maximal Cohen-Macaulay modules and the elliptic group law"
   # description: Keynote presentation on scalable neural networks
@@ -186,15 +185,23 @@
   role: attended
   url: https://www.ams.org/meetings/sectional/2317_program.html
 
-- name: 45th Annual New York State Regional Graduate Mathematics Conference (ANYSRGMC)
-  location: Syracuse University
-  start_date: 2020-03-28
+- name: Fairfax Algebra Days
+  location: George Mason University
+  start_date: 2024-03-09
+  end_date: 2024-03-10
   role: attended
-  url: https://mgo.syr.edu/conferences/past-conferences/2020-conference/
+  url: https://sites.google.com/site/rebeccargmath/rebecca-r-g/fad-2024
 
-- name: 45th Annual New York State Regional Graduate Mathematics Conference (ANYSRGMC)
+- name: Route 81 Conference on Commutative Algebra and Algebraic Geometry
   location: Syracuse University
-  start_date: 2020-03-28
+  start_date: 2023-11-11
   role: attended
-  url: https://mgo.syr.edu/conferences/past-conferences/2020-conference/
+  url: https://sites.google.com/view/route81fall23
+
+- name: Route 81 Conference on Commutative Algebra and Algebraic Geometry
+  location: Cornell University
+  start_date: 2024-11-02
+  role: attended
+  url: https://math.cornell.edu/route-81-conference
+
 
