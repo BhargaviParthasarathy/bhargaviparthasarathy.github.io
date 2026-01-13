@@ -1,6 +1,6 @@
 <div class="travel-log">
   {% if site.travel %}
-    {% assign today = "now" | date: "%s" | plus: 0 %}
+    {% assign today_date = "now" | date: "%Y-%m-%d" %}
     {% assign upcoming_list = "" | split: "" %}
     {% assign past_years = site.travel | sort: "path" | reverse %}
     
@@ -8,8 +8,8 @@
     {% for year_doc in past_years %}
       {% if year_doc.conferences %}
         {% for conf in year_doc.conferences %}
-          {% assign conf_date = conf.start_date | date: "%s" | plus: 0 %}
-          {% if conf_date >= today %}
+          {% assign start_date_str = conf.start_date | date: "%Y-%m-%d" %}
+          {% if start_date_str >= today_date %}
             {% assign upcoming_list = upcoming_list | push: conf %}
           {% endif %}
         {% endfor %}
@@ -22,8 +22,19 @@
         <h3>Upcoming Conferences</h3>
         <div class="conference-list">
           {% assign upcoming_sorted = upcoming_list | sort: 'start_date' %}
-          <div class="conference-names">
-            {% for conf in upcoming_sorted %}
+          {% assign current_year = "" %}
+          {% for conf in upcoming_sorted %}
+            {% assign conf_year = conf.start_date | date: "%Y" %}
+            {% if conf_year != current_year %}
+              {% if current_year != "" %}
+                </div>
+              </div>
+              {% endif %}
+              {% assign current_year = conf_year %}
+              <div class="conference-year">
+                <h4>{{ current_year }}</h4>
+                <div class="conference-names">
+            {% endif %}
               <div class="conference-item">
                 <details class="conference-detail">
                   <summary>
@@ -75,8 +86,11 @@
                   </div>
                 </details>
               </div>
-            {% endfor %}
-          </div>
+          {% endfor %}
+          {% if current_year != "" %}
+                </div>
+              </div>
+          {% endif %}
         </div>
       </div>
     {% endif %}
@@ -88,8 +102,8 @@
         {% for year_doc in past_years %}
           {% assign year_upcoming_count = 0 %}
           {% for conf in year_doc.conferences %}
-            {% assign conf_date = conf.start_date | date: "%s" | plus: 0 %}
-            {% if conf_date >= today %}
+            {% assign start_date_str = conf.start_date | date: "%Y-%m-%d" %}
+            {% if start_date_str >= today_date %}
               {% assign year_upcoming_count = year_upcoming_count | plus: 1 %}
             {% endif %}
           {% endfor %}
@@ -100,8 +114,8 @@
               <div class="conference-names">
                 {% assign sorted_confs = year_doc.conferences | sort: 'start_date' | reverse %}
                 {% for conf in sorted_confs %}
-                  {% assign conf_date = conf.start_date | date: "%s" | plus: 0 %}
-                  {% if conf_date < today %}
+                  {% assign start_date_str = conf.start_date | date: "%Y-%m-%d" %}
+                  {% if start_date_str < today_date %}
                     <div class="conference-item">
                       <details class="conference-detail">
                         <summary>
