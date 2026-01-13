@@ -2,7 +2,12 @@
   {% if site.travel %}
     {% assign today_date = "now" | date: "%Y-%m-%d" %}
     {% assign upcoming_list = "" | split: "" %}
-    {% assign past_years = site.travel | sort: "path" | reverse %}
+    {% assign past_years = site.travel | sort: "year" | reverse %}
+    
+    <!-- DEBUG: Total years: {{ past_years | size }} -->
+    {% for year_doc in past_years %}
+      <!-- DEBUG: Year {{ year_doc.year }}, Conferences: {{ year_doc.conferences | size }} -->
+    {% endfor %}
     
     <!-- Extract all upcoming and past conferences -->
     {% for year_doc in past_years %}
