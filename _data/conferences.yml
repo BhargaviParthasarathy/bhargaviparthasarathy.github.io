@@ -69,12 +69,20 @@
 
 - name: Algebra Seminar, Syracuse University
   location: Syracuse, NY
-  start_date: 2026-06-15
-  end_date: 2026-06-18
+  start_date: 2025-09-05
   role: talk
-  talk_title: "Deep Learning in Real-time Systems"
-  description: Keynote presentation on scalable neural networks
-  url: https://example.com/icml2026
+  talk_title: "Homomorphisms of maximal Cohen-Macaulay modules over the cone of an elliptic curve"
+  #description: Keynote presentation on scalable neural networks
+  url: https://www.joshpollitz.com/algebra-seminar
+
+- name: The 2025 AWM Research Symposium, University of Wisconsin-Madison
+  location: Madison, WI
+  start_date: 2025-05-16
+  end_date: 2025-05-18
+  role: talk
+  talk_title: "Homomorphisms of maximal Cohen-Macaulay modules over the cone of an elliptic curve"
+  #description: Keynote presentation on scalable neural networks
+  url: https://awm-math.org/meetings/awm-research-symposium/
 
 - name: International Conference on Machine Learning
   location: Vienna, Austria
@@ -130,16 +138,5 @@
   description: Keynote presentation on scalable neural networks
   url: https://example.com/icml2026
 
-- name: International Conference on Machine Learning
-  location: Vienna, Austria
-  start_date: 2026-06-15
-  end_date: 2026-06-18
-  role: talk
-  talk_title: "Deep Learning in Real-time Systems"
-  description: Keynote presentation on scalable neural networks
-  url: https://example.com/icml2026
 
 
-
-    
-    
