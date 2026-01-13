@@ -186,3 +186,12 @@
     {% if upcoming_list.size == 0 and past_count == 0 %}
   <p>No conferences logged yet.</p>
 {% endif %}
+
+    <!-- Virtual conference note -->
+    <div class="virtual-note" style="margin-top: 2rem; font-size: 0.9rem; color: var(--global-text-color-light); font-style: italic;">
+      <p>* Indicates a virtual conference</p>
+    </div>
+  {% else %}
+    <p>No conference data available.</p>
+  {% endif %}
+</div>
