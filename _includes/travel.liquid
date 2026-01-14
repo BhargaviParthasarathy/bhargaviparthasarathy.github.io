@@ -45,9 +45,11 @@
         <div class="conference-list">
           {% assign upcoming_sorted = upcoming_list | sort: 'start_date' %}
           {% for conf in upcoming_sorted %}
+            {% assign start_month = conf.start_date | date: '%m' %}
+            {% assign end_month = conf.end_date | date: '%m' %}
             {% capture date_label %}
               {% if conf.end_date %}
-                {% if conf.start_date | date: '%m' == conf.end_date | date: '%m' %}
+                {% if start_month == end_month %}
                   {{ conf.start_date | date: '%b %-d' }}–{{ conf.end_date | date: '%-d' }}
                 {% else %}
                   {{ conf.start_date | date: '%b %-d' }}–{{ conf.end_date | date: '%b %-d' }}
@@ -131,9 +133,11 @@
             {% for conf in sorted_confs %}
               {% assign start_date_str = conf.start_date | date: "%Y-%m-%d" %}
               {% if start_date_str < today_date %}
+                {% assign start_month = conf.start_date | date: '%m' %}
+                {% assign end_month = conf.end_date | date: '%m' %}
                 {% capture date_label %}
                   {% if conf.end_date %}
-                    {% if conf.start_date | date: '%m' == conf.end_date | date: '%m' %}
+                    {% if start_month == end_month %}
                       {{ conf.start_date | date: '%b %-d' }}–{{ conf.end_date | date: '%-d' }}
                     {% else %}
                       {{ conf.start_date | date: '%b %-d' }}–{{ conf.end_date | date: '%b %-d' }}
