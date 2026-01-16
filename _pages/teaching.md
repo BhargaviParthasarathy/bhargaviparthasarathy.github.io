@@ -3,7 +3,7 @@ layout: page
 permalink: /teaching/
 title: teaching
 nav: true
-nav_order: 1
+nav_order: 2
 ---
 
 I endorse these fundamental axioms beautifully articulated by [Federico Ardila](https://fardila.com/).
