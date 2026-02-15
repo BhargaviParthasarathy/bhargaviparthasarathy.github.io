@@ -1,200 +1,326 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Bhargavi Parthasarathy",
+    "label": "PhD Candidate, Mathematics",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "bhpartha@syr.edu",
+    "url": "https://bhargaviparthasarathy.github.io",
+    "summary": "PhD candidate in Mathematics at Syracuse University (advisor: Graham J. Leuschke) working in commutative algebra, with a focus on maximal Cohen–Macaulay modules over Cohen–Macaulay rings. Experienced instructor of record across multiple calculus sequences; designs lectures, assessments, and student-centered course materials.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
+      "postalCode": "",
+      "city": "Syracuse",
       "countryCode": "US",
-      "region": "California"
+      "region": "NY"
     },
-    "profiles": [
-      {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
-      }
-    ]
+    "profiles": []
   },
-  "work": [
-    {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
-    }
-  ],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
+      "institution": "Syracuse University",
+      "location": "Syracuse, NY, USA",
+      "url": "",
+      "area": "Mathematics",
       "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "10",
-      "courses": ["Theory of Relativity"]
-    }
-  ],
-  "awards": [
-    {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-location-dot"
+      "startDate": "",
+      "endDate": "2026-05",
+      "score": "",
+      "courses": [],
+      "advisor": "Graham J. Leuschke"
     },
     {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-tag"
+      "institution": "Syracuse University",
+      "location": "Syracuse, NY, USA",
+      "url": "",
+      "area": "Mathematics",
+      "studyType": "MS",
+      "startDate": "",
+      "endDate": "2021-05",
+      "score": "",
+      "courses": []
     },
     {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-envelope"
-    },
-    {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
-    },
-    {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
+      "institution": "Indian Institute of Science Education and Research (IISER), Pune",
+      "location": "Pune, India",
+      "url": "",
+      "area": "Mathematics",
+      "studyType": "Integrated BS–MS (Master of Science in Mathematics)",
+      "startDate": "",
+      "endDate": "2019-05",
+      "score": "",
+      "courses": []
     }
   ],
   "publications": [
     {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
-    },
-    {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
-    },
-    {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
+      "name": "Homomorphisms of Maximal Cohen–Macaulay modules over the cone of an elliptic curve",
+      "publisher": "In preparation",
+      "releaseDate": "",
+      "url": "",
+      "summary": ""
     }
   ],
-  "skills": [
+  "work": [
     {
-      "name": "Physics",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+      "name": "Syracuse University",
+      "position": "Instructor of Record",
+      "location": "Syracuse, NY",
+      "url": "",
+      "startDate": "2021-01",
+      "endDate": "2025-12",
+      "summary": "Presented course material as lectures; created exams, quizzes, and worksheets; assigned final grades.",
+      "highlights": [
+        "MAT 284 Business Calculus — Spring 2025, Spring 2023",
+        "MAT 285 Life Sciences Calculus I — Spring 2024, Summer 2022, Spring 2021",
+        "MAT 295 Calculus I — Fall 2024, Spring 2022, Fall 2021",
+        "MAT 296 Calculus II — Summer 2025, Summer 2024, Fall 2023"
+      ]
+    },
+    {
+      "name": "Syracuse University",
+      "position": "Recitation Leader",
+      "location": "Syracuse, NY",
+      "url": "",
+      "startDate": "2019-08",
+      "endDate": "2025-12",
+      "summary": "Conducted recitations and set quizzes; graded quizzes and exams.",
+      "highlights": [
+        "MAT 183 Elements of Modern Mathematics — Fall 2019, Fall 2020",
+        "MAT 284 Business Calculus — Spring 2020",
+        "MAT 295 Calculus I — Fall 2022",
+        "MAT 296 Calculus II — Fall 2025"
+      ]
+    },
+    {
+      "name": "Syracuse University",
+      "position": "Grader",
+      "location": "Syracuse, NY",
+      "url": "",
+      "startDate": "2020-06",
+      "endDate": "2020-08",
+      "summary": "",
+      "highlights": [
+        "MAT 121 Probability and Statistics for Liberal Arts I — Summer 2020"
+      ]
+    },
+    {
+      "name": "Indian Institute of Science Education and Research (IISER), Pune",
+      "position": "Teaching Fellow",
+      "location": "Pune, India",
+      "url": "",
+      "startDate": "2018-08",
+      "endDate": "2018-12",
+      "summary": "Mentored students for semester projects using the history of science, technology, and medicine framework learned in class.",
+      "highlights": [
+        "HSS 201 Introduction to History of Science, Medicine and Technology — Fall 2018"
       ]
     }
   ],
-  "languages": [
+  "awards": [
     {
-      "language": "German",
-      "fluency": "Native speaker",
-      "icon": ""
+      "title": "JMM Travel Grant",
+      "date": "2026-01",
+      "awarder": "American Mathematical Society",
+      "url": "",
+      "summary": ""
     },
     {
-      "language": "English",
-      "fluency": "Fluent",
-      "icon": ""
+      "title": "AWM Research Symposium Travel Grant",
+      "date": "2025-05",
+      "awarder": "Association for Women in Mathematics",
+      "url": "",
+      "summary": ""
+    },
+    {
+      "title": "AMS Sectional Travel Grant",
+      "date": "2023-10",
+      "awarder": "American Mathematical Society",
+      "url": "",
+      "summary": ""
+    },
+    {
+      "title": "Departmental Summer Fellowship",
+      "date": "2023-05",
+      "awarder": "Syracuse University",
+      "url": "",
+      "summary": ""
     }
   ],
-  "interests": [
+  "volunteer": [
     {
-      "name": "Physics",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+      "organization": "Directed Reading Program, Syracuse University",
+      "location": "Syracuse, NY",
+      "position": "Graduate Mentor",
+      "url": "",
+      "startDate": "2022-01",
+      "endDate": "2025-05",
+      "summary": "Met weekly with undergraduate students to study a topic culminating in an end-of-semester presentation.",
+      "highlights": [
+        "Group theory (Spring 2022)",
+        "Set theory and graph colorings (Fall 2023)",
+        "Applications of Gröbner basis (Spring 2025)"
       ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
     },
     {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "organization": "Syracuse Mathematics Peer Mentoring Program",
+      "location": "Syracuse, NY",
+      "position": "Peer Mentor",
+      "url": "",
+      "startDate": "2023-01",
+      "endDate": "2024-12",
+      "summary": "Organized social events for first-year graduate students to foster community.",
+      "highlights": []
+    },
+    {
+      "organization": "Mathematics Graduate Organization, Syracuse University",
+      "location": "Syracuse, NY",
+      "position": "Colloquium Organizer",
+      "url": "",
+      "startDate": "2021-01",
+      "endDate": "2022-12",
+      "summary": "Organized weekly research and expository talks given by graduate students.",
+      "highlights": []
+    },
+    {
+      "organization": "Association for Women in Mathematics — Syracuse University Chapter",
+      "location": "Syracuse, NY",
+      "position": "President; Vice President",
+      "url": "",
+      "startDate": "2020-01",
+      "endDate": "2022-12",
+      "summary": "Organized job preparation workshops, mental health discussions, career panels, research communication events, and community-building activities.",
+      "highlights": [
+        "President (2021–2022)",
+        "Vice President (2020–2021)"
+      ]
+    },
+    {
+      "organization": "Networking 101 — Conference for Undergraduate Women and Gender Minorities in Physics (CU*iP)",
+      "location": "",
+      "position": "Facilitator",
+      "url": "",
+      "startDate": "2025-01",
+      "endDate": "2025-01",
+      "summary": "Facilitated group discussion with undergraduate students about elevator pitches and communicating with faculty.",
+      "highlights": []
+    },
+    {
+      "organization": "Math E-Carnival — Institute for Advanced Study Women and Math program",
+      "location": "",
+      "position": "Presenter",
+      "url": "",
+      "startDate": "2021-04",
+      "endDate": "2021-04",
+      "summary": "Presented activities for children and discussed underlying mathematical concepts.",
+      "highlights": []
+    },
+    {
+      "organization": "Science and Technology Entry Program (STEP), Syracuse University",
+      "location": "Syracuse, NY",
+      "position": "Instructor/Volunteer",
+      "url": "",
+      "startDate": "2020-01",
+      "endDate": "2021-12",
+      "summary": "Worked weekly with middle and high school students to strengthen understanding of mathematical concepts.",
+      "highlights": []
     }
   ],
   "projects": [
     {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
+      "name": "Invited Talks",
+      "summary": "Invited research talks on maximal Cohen–Macaulay modules and related topics.",
+      "highlights": [
+        "2026 Joint Mathematical Meetings — Homomorphisms of Maximal Cohen–Macaulay modules over the cone of an elliptic curve (Jan 2026)",
+        "2026 Spring Eastern Sectional Meeting (Mar 2026)",
+        "CUNY Graduate Center (Commutative Algebra and Algebraic Geometry Seminar) — Nov 2025",
+        "CUNY Graduate Center (CAAG student seminar) — Nov 2025",
+        "University of Connecticut (Algebra Seminar) — Nov 2025",
+        "Binghamton University (Arithmetic Geometry Seminar) — Nov 2025",
+        "2025 Fall Eastern Virtual Sectional Meeting — Oct 2025",
+        "Syracuse University (Algebra Seminar) — Sep 2025",
+        "AWM Research Symposium (UW–Madison) — May 2025"
+      ],
+      "startDate": "2025-05",
+      "endDate": "2026-03",
+      "url": ""
+    },
+    {
+      "name": "Contributed Talks",
+      "summary": "Selected contributed presentations in seminars and conferences.",
+      "highlights": [
+        "BUGCAT (Binghamton University) — Maximal Cohen–Macaulay modules and the elliptic group law (Sep 2025)",
+        "WALKS (Syracuse University) — Maximal Cohen–Macaulay modules and the elliptic group law (Sep 2025)",
+        "50th ANYSRGMC (Syracuse University) — Homomorphisms of maximal Cohen–Macaulay modules over the cone of an elliptic curve (Apr 2025)",
+        "WALKS (Syracuse University) — Matrix Factorizations: An Incomplete Summary (Jan 2025)",
+        "WALKS (Syracuse University) — AR Sequences (Oct 2023)",
+        "MGO Graduate Colloquium (Syracuse University) — AR sequences and Cohen–Macaulay modules (Apr 2023)"
+      ],
+      "startDate": "2023-04",
+      "endDate": "2025-09",
+      "url": ""
+    },
+    {
+      "name": "Professional Development",
+      "summary": "Programs focused on job-market preparation and pedagogy.",
+      "highlights": [
+        "Summer CAMP, University of Nebraska–Lincoln (Aug 2025)",
+        "Future Professionals Program, WISE (Syracuse University) (2023–2025)",
+        "Teaching Seminar, Department of Mathematics (Syracuse University) (Fall 2024)"
+      ],
+      "startDate": "2023-01",
+      "endDate": "2025-12",
+      "url": ""
+    },
+    {
+      "name": "Workshops and Conferences Attended",
+      "summary": "Selected workshops and conferences attended in commutative algebra and related areas.",
+      "highlights": [
+        "Commutative Algebra and its Interaction with Algebraic Geometry — CMND (Notre Dame) & SLMath (Berkeley) (May 2023)",
+        "Women and Mathematics: Representation theory and categorification — IAS (Princeton) (Apr 2021)",
+        "Route 81 (Cornell University) (Nov 2024); Route 81 (Syracuse University) (Nov 2023)",
+        "AMS Fall Eastern Sectional Meeting (University at Albany) (Oct 2024)",
+        "AMS Fall Central Sectional Meeting (Creighton University) (Oct 2023)"
+      ],
+      "startDate": "2021-04",
+      "endDate": "2025-11",
+      "url": ""
     }
-  ]
+  ],
+  "skills": [
+    {
+      "name": "Research",
+      "level": "",
+      "icon": "",
+      "keywords": [
+        "Commutative algebra",
+        "Maximal Cohen–Macaulay modules",
+        "Cohen–Macaulay rings",
+        "Matrix factorizations",
+        "Auslander–Reiten sequences"
+      ]
+    },
+    {
+      "name": "Teaching",
+      "level": "",
+      "icon": "",
+      "keywords": [
+        "Calculus instruction",
+        "Assessment design (exams/quizzes/worksheets)",
+        "Recitation leadership",
+        "Grading and feedback"
+      ]
+    }
+  ],
+  "languages": [],
+  "interests": [
+    {
+      "name": "Research Interests",
+      "icon": "",
+      "keywords": [
+        "Commutative algebra",
+        "Maximal Cohen–Macaulay modules over Cohen–Macaulay rings"
+      ]
+    }
+  ],
+  "references": [],
+  "certificates": []
 }
