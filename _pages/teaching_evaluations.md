@@ -5,7 +5,9 @@ title: teaching evaluations
 nav: false
 ---
 
-Courses taught and semesters listed by role. Instructor of Record and Recitation Leader roles are listed first.
+![Word Cloud](/assets/img/world_cloud.png)
+
+I created this word cloud from student comments in course evaluations. Detailed evaluations are linked below, organized by role and semester.
 
 ## Instructor of Record
 - MAT 284 Business Calculus - [Spring 2025](/assets/pdf/teaching-evaluations/MAT%20284%20SPRING%2025.pdf), [Spring 2023](/assets/pdf/teaching-evaluations/MAT%20284%20SPRING%2023.pdf)
