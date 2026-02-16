@@ -5,7 +5,7 @@ title: teaching evaluations
 nav: false
 ---
 
-![Word Cloud](/assets/img/world_cloud.png)
+![Word Cloud](/assets/img/Word_cloud.png)
 
 I created this word cloud from student comments in course evaluations. Detailed evaluations are linked below, organized by role and semester.
 
