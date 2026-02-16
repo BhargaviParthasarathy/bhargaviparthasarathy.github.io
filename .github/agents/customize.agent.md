@@ -225,17 +225,17 @@ Your content here in Markdown format.
 **BibTeX entries (in `_bibliography/papers.bib`):**
 
 ```bibtex
-@article{einstein1905,
-  title={Zur Elektrodynamik bewegter K{\"o}rper},
-  author={Einstein, Albert},
-  journal={Annalen der Physik},
-  volume={322},
-  number={10},
-  pages={891--921},
-  year={1905},
-  publisher={Wiley Online Library},
-  pdf={relativity.pdf},
-  abstract={This paper introduces the theory of special relativity.},
+@article{smith2022,
+  title={Example Article Title},
+  author={Smith, Jane},
+  journal={Journal Name},
+  volume={1},
+  number={1},
+  pages={1--10},
+  year={2022},
+  publisher={Publisher},
+  pdf={example-paper.pdf},
+  abstract={This paper presents example research.},
   selected={true}
 }
 ```
@@ -404,7 +404,7 @@ Help users avoid these frequent errors:
   - Unmatched braces `{}`
   - Invalid characters in entry keys
   - Check existing entries in `_bibliography/papers.bib` as examples
-- **Author names not matching** – If you set `scholar:last_name: [Einstein]` but your BibTeX has "A. Einstein", it won't highlight. Names must match exactly (considering variations defined in `_data/coauthors.yml`)
+- **Author names not matching** – If you set `scholar:last_name: [Smith]` but your BibTeX has "J. Smith", it won't highlight. Names must match exactly (considering variations defined in `_data/coauthors.yml`)
 
 ### Media & Assets
 
