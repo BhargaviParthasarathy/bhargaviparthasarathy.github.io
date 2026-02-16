@@ -14,3 +14,7 @@ I endorse these fundamental axioms beautifully articulated by [Federico Ardila](
   <li><strong>Axiom 3:</strong> Mathematics is a powerful, malleable tool that can be shaped and used differently by various communities to serve their needs.</li>
   <li><strong>Axiom 4:</strong> Every student deserves to be treated with dignity and respect.</li>
 </ul>
+
+---
+
+View my [teaching evaluations](/teaching/evaluations/) with student feedback and course history.
