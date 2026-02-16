@@ -14,9 +14,9 @@ Courses taught and semesters listed by role. Instructor of Record and Recitation
 - MAT 296 Calculus II - [Summer 2025](/assets/pdf/teaching-evaluations/MAT%20296%20SUMMER%2025.pdf), [Summer 2024](/assets/pdf/teaching-evaluations/MAT%20296%20SUMMER%2024.pdf), [Fall 2023](/assets/pdf/teaching-evaluations/MAT%20296%20FALL%2023.pdf)
 
 ## Recitation Leader
-- MAT 183 Elements of Modern Mathematics - Fall 2019, Fall 2020
-- MAT 284 Business Calculus - Spring 2020
-- MAT 295 Calculus I - Fall 2022
+- MAT 183 Elements of Modern Mathematics - [Fall 2019](/assets/pdf/teaching-evaluations/MAT%20183%20FALL%2019.pdf), [Fall 2020](/assets/pdf/teaching-evaluations/MAT%20183%20FALL%2020.pdf)
+- MAT 284 Business Calculus - [Spring 2020](/assets/pdf/teaching-evaluations/MAT%20284%20SPRING%2020.pdf)
+- MAT 295 Calculus I - [Fall 2022](/assets/pdf/teaching-evaluations/MAT%20295%20FALL%2022.pdf)
 - MAT 296 Calculus II - [Fall 2025](/assets/pdf/teaching-evaluations/MAT%20296%20FALL%2025.pdf)
 
 ## Other Teaching Roles
