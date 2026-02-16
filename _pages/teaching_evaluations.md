@@ -5,9 +5,11 @@ title: teaching evaluations
 nav: false
 ---
 
+I created this word cloud from student comments in course evaluations.
+
 <img src="/assets/img/Word_cloud.png" alt="Word Cloud" style="max-width: 100%; height: auto;">
 
-I created this word cloud from student comments in course evaluations. Detailed evaluations are linked below, organized by role and semester.
+ Detailed evaluations are linked below, organized by role and semester.
 
 ## Instructor of Record
 - MAT 284 Business Calculus - [Spring 2025](/assets/pdf/teaching-evaluations/MAT%20284%20SPRING%2025.pdf), [Spring 2023](/assets/pdf/teaching-evaluations/MAT%20284%20SPRING%2023.pdf)
