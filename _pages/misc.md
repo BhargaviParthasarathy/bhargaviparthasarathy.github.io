@@ -6,7 +6,7 @@ nav_order: 5
 dropdown: true
 children:
   - title: where's waldo
-    permalink: wwaldo
+    permalink: /waldo/
   - title: divider
   - title: postcards
     permalink: /postcards/
