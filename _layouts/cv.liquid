@@ -13,19 +13,22 @@ layout: default
 {% unless site.data.resume %}
   <div class="post">
     <header class="post-header">
-      <h1 class="post-title">
-        {{ page.title }}
-        {% if cv_pdf_url %}
-          <a
-            href="{{ cv_pdf_url }}"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="float-right"
-          >
-            <i class="fa-solid fa-file-pdf"></i>
-          </a>
-        {% endif %}
-      </h1>
+      {% comment %}
+        <h1 class="post-title">
+          {{ page.title }}
+          {% if cv_pdf_url %}
+            <a
+              href="{{ cv_pdf_url }}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="float-right"
+            >
+              <i class="fa-solid fa-file-pdf"></i>
+            </a>
+          {% endif %}
+        </h1>
+      {% endcomment %}
+      <h1 class="post-title">{{ page.title }}</h1>
       {% if page.description %}
         <p class="post-description">{{ page.description }}</p>
       {% endif %}
@@ -70,19 +73,22 @@ layout: default
 {% else %}
   <div class="post">
     <header class="post-header">
-      <h1 class="post-title">
-        {{ page.title }}
-        {% if cv_pdf_url %}
-          <a
-            href="{{ cv_pdf_url }}"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="float-right"
-          >
-            <i class="fa-solid fa-file-pdf"></i>
-          </a>
-        {% endif %}
-      </h1>
+      {% comment %}
+        <h1 class="post-title">
+          {{ page.title }}
+          {% if cv_pdf_url %}
+            <a
+              href="{{ cv_pdf_url }}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="float-right"
+            >
+              <i class="fa-solid fa-file-pdf"></i>
+            </a>
+          {% endif %}
+        </h1>
+      {% endcomment %}
+      <h1 class="post-title">{{ page.title }}</h1>
       {% if page.description %}
         <p class="post-description">{{ page.description }}</p>
       {% endif %}
