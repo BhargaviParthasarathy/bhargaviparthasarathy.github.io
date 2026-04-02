@@ -5,55 +5,42 @@ permalink: /waldo/
 nav: false
 ---
 
-{% assign conference_photos = site.static_files
-	| where_exp: "f", "f.path contains '/assets/img/Conference Photos/'"
-	| where_exp: "f", "f.extname == '.jpg' or f.extname == '.jpeg'"
-	| sort: "name"
-	| reverse %}
-
 <p>Some places I have been to, some people I have met.</p>
 
-{% if conference_photos.size > 0 %}
-	<div class="conference-gallery" role="list" aria-label="Conference photos">
-		{% for photo in conference_photos %}
-			{% assign photo_url = photo.path | relative_url | replace: ' ', '%20' %}
-			{% assign file_label = photo.basename | replace: '-', ' ' | replace: '_', ' ' %}
-			<figure class="conference-card" role="listitem">
-				<img src="{{ photo_url }}" alt="{{ file_label }}" loading="lazy" />
-				<figcaption>{{ file_label }}</figcaption>
-			</figure>
-		{% endfor %}
-	</div>
-{% else %}
-	<p>No conference photos found yet in <strong>/assets/img/Conference Photos/</strong>.</p>
-{% endif %}
+<div class="conference-photos">
+  <img src="/assets/img/Conference%20Photos/2025%20Summer%20CAMP.jpg" alt="2025 Summer CAMP" loading="lazy" />
+  <img src="/assets/img/Conference%20Photos/2025%20ANYSRGMC.jpg" alt="2025 ANYSRGMC" loading="lazy" />
+  <img src="/assets/img/Conference%20Photos/2024%20Introductory%20Workshop%20SLMath.jpg" alt="2024 Introductory Workshop SLMath" loading="lazy" />
+  <img src="/assets/img/Conference%20Photos/2024%20Fairfax%20Algebra%20Days.jpg" alt="2024 Fairfax Algebra Days" loading="lazy" />
+  <img src="/assets/img/Conference%20Photos/2024%20Connections%20Workshop%20SLMath.jpg" alt="2024 Connections Workshop SLMath" loading="lazy" />
+  <img src="/assets/img/Conference%20Photos/2024%20ANYSRGMC.jpg" alt="2024 ANYSRGMC" loading="lazy" />
+  <img src="/assets/img/Conference%20Photos/2023%20Route%2081.jpg" alt="2023 Route 81" loading="lazy" />
+  <img src="/assets/img/Conference%20Photos/2023%20Notre%20Dame%20SLMath%202.jpg" alt="2023 Notre Dame SLMath 2" loading="lazy" />
+  <img src="/assets/img/Conference%20Photos/2023%20Notre%20Dame%20SLMath.jpg" alt="2023 Notre Dame SLMath" loading="lazy" />
+  <img src="/assets/img/Conference%20Photos/2023%20Morgantown%20Algebra%20Days.jpg" alt="2023 Morgantown Algebra Days" loading="lazy" />
+  <img src="/assets/img/Conference%20Photos/2023%20KUMUNU.jpeg" alt="2023 KUMUNU" loading="lazy" />
+  <img src="/assets/img/Conference%20Photos/2023%20ANYSRGMC.jpg" alt="2023 ANYSRGMC" loading="lazy" />
+  <img src="/assets/img/Conference%20Photos/2022%20ANYSRGMC.jpg" alt="2022 ANYSRGMC" loading="lazy" />
+</div>
 
 <style>
-.conference-gallery {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-	gap: 1rem;
-	margin-top: 1rem;
+.conference-photos {
+  max-width: 900px;
+  margin: 1rem auto;
 }
 
-.conference-card {
-	margin: 0;
-	border: 1px solid #ddd;
-	border-radius: 10px;
-	overflow: hidden;
-	background: #fff;
+.conference-photos img {
+  width: 100%;
+  height: 520px;
+  object-fit: contain;
+  background: #f5f5f5;
+  display: block;
+  margin: 0 0 1rem;
 }
 
-.conference-card img {
-	width: 100%;
-	height: 240px;
-	object-fit: cover;
-	display: block;
-}
-
-.conference-card figcaption {
-	font-size: 0.95rem;
-	padding: 0.6rem 0.75rem;
-	border-top: 1px solid #eee;
+@media (max-width: 700px) {
+  .conference-photos img {
+    height: 320px;
+  }
 }
 </style>
