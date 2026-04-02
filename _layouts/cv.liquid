@@ -1,18 +1,23 @@
 ---
 layout: default
 ---
+{% assign cv_pdf_url = nil %}
+{% assign cv_pdf_source = page.cv_pdf | default: site.data.socials.cv_pdf %}
+{% if cv_pdf_source %}
+  {% if cv_pdf_source contains '://' %}
+    {% assign cv_pdf_url = cv_pdf_source %}
+  {% else %}
+    {% assign cv_pdf_url = cv_pdf_source | replace_first: '/', '' | prepend: '/' | relative_url %}
+  {% endif %}
+{% endif %}
 {% unless site.data.resume %}
   <div class="post">
     <header class="post-header">
       <h1 class="post-title">
         {{ page.title }}
-        {% if page.cv_pdf %}
+        {% if cv_pdf_url %}
           <a
-            {% if page.cv_pdf contains '://' %}
-              href="{{ page.cv_pdf }}"
-            {% else %}
-              href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}"
-            {% endif %}
+            href="{{ cv_pdf_url }}"
             target="_blank"
             rel="noopener noreferrer"
             class="float-right"
@@ -27,6 +32,16 @@ layout: default
     </header>
 
     <article>
+      {% if cv_pdf_url %}
+        <section class="cv-pdf-viewer" aria-label="Curriculum Vitae PDF preview">
+          <object class="cv-pdf-object" data="{{ cv_pdf_url }}" type="application/pdf">
+            <p class="cv-pdf-fallback">
+              Your browser cannot display PDFs inline.
+              <a href="{{ cv_pdf_url }}" target="_blank" rel="noopener noreferrer">Open the CV PDF</a>.
+            </p>
+          </object>
+        </section>
+      {% endif %}
       <div class="cv">
         {% for entry in site.data.cv %}
           <a class="anchor" id="{{ entry.title }}"></a>
@@ -57,13 +72,9 @@ layout: default
     <header class="post-header">
       <h1 class="post-title">
         {{ page.title }}
-        {% if page.cv_pdf %}
+        {% if cv_pdf_url %}
           <a
-            {% if page.cv_pdf contains '://' %}
-              href="{{ page.cv_pdf }}"
-            {% else %}
-              href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}"
-            {% endif %}
+            href="{{ cv_pdf_url }}"
             target="_blank"
             rel="noopener noreferrer"
             class="float-right"
@@ -78,6 +89,16 @@ layout: default
     </header>
 
     <article>
+      {% if cv_pdf_url %}
+        <section class="cv-pdf-viewer" aria-label="Curriculum Vitae PDF preview">
+          <object class="cv-pdf-object" data="{{ cv_pdf_url }}" type="application/pdf">
+            <p class="cv-pdf-fallback">
+              Your browser cannot display PDFs inline.
+              <a href="{{ cv_pdf_url }}" target="_blank" rel="noopener noreferrer">Open the CV PDF</a>.
+            </p>
+          </object>
+        </section>
+      {% endif %}
       <div class="cv">
         {% for data in site.data.resume %}
           {% if site.jsonresume and site.jsonresume.size > 0 %}
