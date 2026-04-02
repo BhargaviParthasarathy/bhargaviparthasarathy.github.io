@@ -10,6 +10,44 @@ layout: default
     {% assign cv_pdf_url = cv_pdf_source | replace_first: '/', '' | prepend: '/' | relative_url %}
   {% endif %}
 {% endif %}
+<div class="post">
+  <header class="post-header">
+    {% comment %}
+      <h1 class="post-title">
+        {{ page.title }}
+        {% if cv_pdf_url %}
+          <a
+            href="{{ cv_pdf_url }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="float-right"
+          >
+            <i class="fa-solid fa-file-pdf"></i>
+          </a>
+        {% endif %}
+      </h1>
+    {% endcomment %}
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="post-description">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  <article>
+    {% if cv_pdf_url %}
+      <section class="cv-pdf-viewer" aria-label="Curriculum Vitae PDF preview">
+        <object class="cv-pdf-object" data="{{ cv_pdf_url }}" type="application/pdf">
+          <p class="cv-pdf-fallback">
+            Your browser cannot display PDFs inline.
+            <a href="{{ cv_pdf_url }}" target="_blank" rel="noopener noreferrer">Open the CV PDF</a>.
+          </p>
+        </object>
+      </section>
+    {% endif %}
+  </article>
+</div>
+
+{% if false %}
 {% unless site.data.resume %}
   <div class="post">
     <header class="post-header">
@@ -152,3 +190,4 @@ layout: default
     </article>
   </div>
 {% endunless %}
+{% endif %}
