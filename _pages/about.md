@@ -29,6 +29,6 @@ announcements:
 
 I am a graduate student in the Mathematics department at [Syracuse University](https://artsandsciences.syracuse.edu/mathematics/). I am advised by [Prof. Graham Leuschke](https://artsandsciences.syracuse.edu/people/faculty/leuschke-graham-j). 
 
-<i>I am expected to graduate with my PhD in May 2026 and currently am on the job market.</i>
+<i>I am expected to graduate with my PhD in August 2026 and currently am on the job market.</i>
 
 My research interests are in commutative algebra. In particular, I like thinking about maximal Cohen-Macaulay (MCM) modules over Cohen-Macaulay rings.
