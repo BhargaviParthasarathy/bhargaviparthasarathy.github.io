@@ -32,8 +32,8 @@ nav: false
 .conference-photos img {
   width: 100%;
   height: 520px;
-  object-fit: contain;
-  background: #f5f5f5;
+  object-fit: cover;
+  object-position: center;
   display: block;
   margin: 0 0 1rem;
   -webkit-user-drag: none;
@@ -47,30 +47,3 @@ nav: false
 }
 </style>
 
-<script>
-(function () {
-  const container = document.getElementById('conferencePhotos');
-  if (!container) return;
-
-  container.addEventListener('contextmenu', function (event) {
-    event.preventDefault();
-  });
-
-  container.addEventListener('dragstart', function (event) {
-    event.preventDefault();
-  });
-
-  container.addEventListener('selectstart', function (event) {
-    event.preventDefault();
-  });
-
-  document.addEventListener('keydown', function (event) {
-    const key = event.key.toLowerCase();
-    const isSave = (event.ctrlKey || event.metaKey) && key === 's';
-    const isViewSource = (event.ctrlKey || event.metaKey) && key === 'u';
-    if (isSave || isViewSource) {
-      event.preventDefault();
-    }
-  });
-})();
-</script>
