@@ -25,7 +25,7 @@ nav: false
 
 <style>
 .conference-photos {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 1rem auto;
 }
 
