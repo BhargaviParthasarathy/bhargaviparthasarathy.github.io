@@ -5,12 +5,13 @@ permalink: /waldo/
 nav: false
 ---
 <p class="quote-epigraph"><em>
-People I've met, new places I've seen,<br>
-Beautiful ideas, theorems I've gleaned.<br>
-Yet barely scratched the surface,<br>
-Realized the journey is the purpose.<br>
+People I've met, new places seen,<br>
+Beautiful ideas and theorems gleaned.<br>
+Just barely scratched the surface,<br>
+Realized the journey is the purpose.<br> <br>
 With dreams mountain high and ocean deep,<br>
-I have miles to go before I sleep.
+I have miles to go before I sleep,
+More miles to go before I sleep.
 </em></p>
 
 <div class="conference-photos" id="conferencePhotos">
