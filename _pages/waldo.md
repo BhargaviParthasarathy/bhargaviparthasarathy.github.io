@@ -8,7 +8,8 @@ nav: false
 People I've met, new places seen,<br>
 Beautiful ideas and theorems gleaned.<br>
 Just barely scratched the surface,<br>
-Realized the journey is the purpose.<br> <br>
+Realized the journey is the purpose.<br>
+<br>
 With dreams mountain high and ocean deep,<br>
 I have miles to go before I sleep,
 More miles to go before I sleep.
