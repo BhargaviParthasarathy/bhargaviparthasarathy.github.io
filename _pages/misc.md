@@ -7,7 +7,7 @@ dropdown: true
 children:
   - title: where's waldo
     permalink: /waldo/
-  - title: divider
-  - title: postcards
-    permalink: /postcards/
+  #- title: divider
+  #- title: postcards
+ #   permalink: /postcards/
 ---
