@@ -4,10 +4,10 @@ title: where's waldo
 permalink: /waldo/
 nav: false
 ---
-<p><em>
+<p class="quote-epigraph"><em>
 People I've met, new places I've seen,<br>
 Beautiful ideas, theorems I've gleaned.<br>
-Yet barely scrathed the surface,<br>
+Yet barely scratched the surface,<br>
 Realized the journey is the purpose.<br>
 With dreams mountain high and ocean deep,<br>
 I have miles to go before I sleep.
@@ -35,7 +35,7 @@ I have miles to go before I sleep.
   margin: 1rem auto 1.5rem;
   margin-left: auto;
   max-width: 36rem;
-  text-align: right;
+  text-align: center;
 }
 
 .conference-photos {
