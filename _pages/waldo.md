@@ -5,11 +5,11 @@ permalink: /waldo/
 nav: false
 ---
 <p class="quote-epigraph"><em>
-People I've met, new places I've seen,
-Beautiful ideas, theorems I've gleaned.
-Yet barely scrathed the surface,
-Realized the journey is the purpose.
-With dreams mountain high and ocean deep,
+People I've met, new places I've seen,<br>
+Beautiful ideas, theorems I've gleaned.<br>
+Yet barely scrathed the surface,<br>
+Realized the journey is the purpose.<br>
+With dreams mountain high and ocean deep,<br>
 I have miles to go before I sleep.
 </em></p>
 
