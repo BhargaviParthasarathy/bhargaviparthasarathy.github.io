@@ -4,7 +4,7 @@ title: where's waldo
 permalink: /waldo/
 nav: false
 ---
-<p class="quote-epigraph"><em>
+<p><em>
 People I've met, new places I've seen,<br>
 Beautiful ideas, theorems I've gleaned.<br>
 Yet barely scrathed the surface,<br>
