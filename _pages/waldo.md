@@ -31,19 +31,13 @@ nav: false
 
 .conference-photos img {
   width: 100%;
-  height: 520px;
-  object-fit: cover;
-  object-position: center;
+  height: auto;
+  object-fit: contain;
   display: block;
   margin: 0 0 1rem;
   -webkit-user-drag: none;
   user-select: none;
 }
 
-@media (max-width: 700px) {
-  .conference-photos img {
-    height: 320px;
-  }
-}
 </style>
 
