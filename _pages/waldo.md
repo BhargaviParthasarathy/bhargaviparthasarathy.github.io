@@ -11,7 +11,7 @@ Just barely scratched the surface,<br>
 Realized the journey is the purpose.<br>
 <br>
 With dreams mountain high and ocean deep,<br>
-I have miles to go before I sleep,<br">
+I have miles to go before I sleep,<br>
 More miles to go before I sleep.
 </em></p>
 
